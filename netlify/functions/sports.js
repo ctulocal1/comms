@@ -1,6 +1,5 @@
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': 'https://www.ctulocal1.org',
-  'Access-Control-Allow-Origin': 'localhost',
   'Access-Control-Allow-Headers':
     'Origin, X-Requested-With, Content-Type, Accept',
 }
