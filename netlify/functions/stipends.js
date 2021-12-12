@@ -1,5 +1,6 @@
 exports.handler = async (event, context) => {
   const id = event.queryStringParameters.id;
+  console.log(id)
   if (!id) {
     return {
       statusCode: 400,
@@ -19,7 +20,7 @@ exports.handler = async (event, context) => {
   } else {
     return {
       statusCode: 404,
-      body: `No stipend was found for that Employee ID.`,
+      body: "{message: 'No stipend was found for that Employee ID.'}",
     }
   }
 };
