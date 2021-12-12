@@ -1,3 +1,9 @@
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': 'https://www.ctulocal1.org',
+  'Access-Control-Allow-Origin': 'localhost',
+  'Access-Control-Allow-Headers':
+    'Origin, X-Requested-With, Content-Type, Accept',
+}
 exports.handler = async (event, context) => {
   const id = event.queryStringParameters.id;
   console.log(id)
@@ -16,6 +22,10 @@ exports.handler = async (event, context) => {
   if (1 > 0) {
     return {
       statusCode: 200,
+      headers: {
+        ...CORS_HEADERS,
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify(hits) ,
     };
   } else {
