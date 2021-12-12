@@ -17,8 +17,8 @@ exports.handler = async (event, context) => {
     return Number.parseInt( recipient.id ) === Number.parseInt( id )
   }) 
 
-  // if (hits.length > 0) {
-  if (1 > 0) {
+  if (hits.length > 0) {
+  // if (1 > 0) {
     return {
       statusCode: 200,
       headers: {
