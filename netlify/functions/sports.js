@@ -18,7 +18,6 @@ exports.handler = async (event, context) => {
   }) 
 
   if (hits.length > 0) {
-  // if (1 > 0) {
     return {
       statusCode: 200,
       headers: {

@@ -1,0 +1,93 @@
+<h2>Find your stipend</h2>
+<form id="stipend-form">
+  <label for="cpsid">CPS Employee ID: <input type="text" id="cpsid"></label>
+  <button id="lookup" type="submit">Lookup</button>  
+</form>
+
+<output id="stipend" for="cpsid"></output>
+
+<script type="text/javascript">
+  function autorun() {
+      let dollarize = function (amount) {
+          let formatted = new Intl.NumberFormat('en-US', {
+              style: 'currency',
+              currency: 'USD',
+              maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+            }).format(amount);
+          return formatted;
+        } 
+      const lookup = document.getElementById("stipend-form"); 
+      const btn = document.getElementById("lookup")
+      const cpsid = document.getElementById("cpsid");
+      const output = document.getElementById("stipend");
+      lookup.addEventListener("submit", async () => {
+          event.preventDefault();
+          let id = cpsid.value;
+          let fetchURL = `https://sad-archimedes-551ea7.netlify.app/.netlify/functions/sports?id=${id}`;
+          const isOk = response => response.ok ? response.json() : Promise.reject(new Error('Failed to load data from server'))
+          let errorMsg;
+          let stipends = await fetch(fetchURL)
+            .then(isOk)
+            .catch(error => {
+                console.log(error)
+              });
+          if (stipends) {
+              const firstname = stipends[0].firstname,
+                lastname = stipends[0].lastname,
+                type = stipends[0].class;
+              let header = `
+ <h3>${stipends.length} stipends found for ${firstname} ${lastname}, ${type}</h3>
+ <table id="stipends" border="none" cellspacing = "4" cellpadding="4">
+ <thead>
+ <tr><th scope="col">Position</th><th scope="col">Amount</th></tr>
+ </thead>
+ <tbody>
+ `;
+              let rows = "";
+              let stipendText = "";
+              for (stipend of stipends) {
+                  let row = `
+ <tr><td>${stipend.type}</td><td>${dollarize(stipend.amount)}</td></tr>
+ `;
+                  rows += row;
+                }
+              let footer = `
+ </tbody>
+ </table>
+ `;
+              output.innerHTML = header + rows + footer;
+
+            } else {
+                output.innerHTML = `<p>There was an error.</p>`
+              }
+        });
+    }
+  if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+  else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+  else window.onload = autorun;
+</script>
+<style>
+output {
+  padding: 40px;
+  margin: 40px 0;
+  background: #ddd;
+  display: block;
+  clear: both;
+  width: 100%;
+  max-width: 400px;
+}
+output table {
+  width: auto;
+  border: none !important;
+}
+output table td,
+output table th {
+  border: none;
+}
+output table tr {
+  border: none;
+}
+output table th {
+  border-bottom: 1px solid black;
+}
+</style>
