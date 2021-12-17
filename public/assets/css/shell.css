@@ -1,0 +1,140 @@
+/*                */
+/* General Styles */
+/*                */
+body {
+  margin:0;
+  padding: 0;
+  background: #83181f;
+  box-sizing: border-box;
+  font-family: 'noto sans', 'open sans',roboto,sans;
+  --smallest: 12px;
+  --small: calc( var(--smallest) * 1.2 );
+  --normal: calc( var(--small) * 1.2 );
+  --medium: calc( var(--normal) * 1.2 );
+  --large: calc( var(--medium) * 1.2 );
+  --larger: calc( var(--large) * 1.2 );
+  --huge: calc( var(--larger) * 1.3 );
+}
+h6 {
+  font-size: var(--normal);
+  padding: 0;
+  margin: var(--smallest) 0 0 0;
+}
+h5 {
+  font-size: var(--large);
+  font-weight: 300;
+  padding: 0;
+  margin: var(--smallest) 0 0 0;
+}
+h4 {
+  font-size: var(--large);
+  padding: 0;
+  margin: var(--small) 0 0 0;
+}
+h3 {
+  font-size: var(--larger);
+  font-weight: 400;
+  padding: 0;
+  margin: var(--small) 0 0 0;
+}
+h2 {
+  font-size: var(--larger);
+  font-weight: 600;
+  padding: 0;
+  margin: var(--normal) 0 0 0;
+}
+h1 {
+  font-weight: 500;
+  font-size: var(--huge);
+  font-weight: normal;
+  padding: 0;
+  margin: var(--medium) 0 0 0;
+}
+ol, li {
+  margin: var(--smallest) 0 0 0;
+}
+li {
+  font-size: var(--normal);
+  margin: calc(var(--smallest)/2) 0 0 0;
+}
+p, div, section, main {
+  font-size: var(--normal);
+  padding: 0;
+  margin: var(--smallest) 0 0 0;
+}
+a {
+  color: #ed1b2e;
+}
+a:hover,
+a:focus {
+  color: blue;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 2px;
+}
+
+/******************/
+/* Section Styles */
+/******************/
+header {
+  background: #111018;
+  color: white;
+  max-height: 50px;
+}
+header nav {
+  width: 100vw;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+header nav ul {
+  list-style-type: none;
+  height: 50px;
+  margin: 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+header li {
+  line-height: 30px;
+  font-size: 20px;
+  height: 40px;
+}
+header nav a {
+  color: white;
+  padding: 5px;
+  margin: 5px;
+}
+header nav a:focus {
+  outline: 2px dotted white;
+  color: #bbb;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 2px;
+}
+main {
+  width: 100vw;
+  background: #fafaff;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  min-height: calc(100vh - 100px);
+  box-sizing: border-box;
+}
+footer {
+  width: 100vw;
+  max-width: 800px;
+  max-height: 50px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #bbb;
+  color: #333;
+  text-align: center;
+  vertical-align: top;
+}
+footer p {
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  font-size: var(--smaller);
+}

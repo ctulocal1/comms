@@ -4,7 +4,7 @@
   <button id="lookup" type="submit">Lookup</button>  
 </form>
 
-<output id="stipend" for="cpsid"></output>
+<output id="stipend" for="cpsid"><h3>Stipend Information</h3></output>
 
 <script type="text/javascript">
   function autorun() {
@@ -22,6 +22,7 @@
       const output = document.getElementById("stipend");
       lookup.addEventListener("submit", async () => {
           event.preventDefault();
+          output.innerHTML += "<p>Searching database...</p>";
           let id = cpsid.value;
           let fetchURL = `https://sad-archimedes-551ea7.netlify.app/.netlify/functions/sports?id=${id}`;
           const isOk = response => response.ok ? response.json() : Promise.reject(new Error('Failed to load data from server'))
@@ -35,9 +36,10 @@
               const firstname = stipends[0].firstname,
                 lastname = stipends[0].lastname,
                 type = stipends[0].class;
+              const s = stipends.length > 1 ? "s" : ""
               let header = `
- <h3>${stipends.length} stipends found for ${firstname} ${lastname}, ${type}</h3>
- <table id="stipends" border="none" cellspacing = "4" cellpadding="4">
+ <h3>${stipends.length} stipend${s} found for <br>${firstname} ${lastname}, ${type}</h3>
+ <table id="stipends" border="none" cellspacing="1" cellpadding="1">
  <thead>
  <tr><th scope="col">Position</th><th scope="col">Amount</th></tr>
  </thead>
@@ -58,7 +60,8 @@
               output.innerHTML = header + rows + footer;
 
             } else {
-                output.innerHTML = `<p>There was an error.</p>`
+                output.innerHTML = `<p>Your CPS ID was not found or there was a server error.</p>
+ <p>If you think this was a mistake, please complete our <a href="https://ctuforms.org/index.php/178333?lang=en">inquiry form</a>.</p>`
               }
         });
     }
@@ -76,18 +79,27 @@ output {
   width: 100%;
   max-width: 400px;
 }
-output table {
+output table#stipends {
   width: auto;
   border: none !important;
 }
-output table td,
-output table th {
+output table#stipends td,
+output table#stipends th {
   border: none;
 }
-output table tr {
+output table#stipends tr {
   border: none;
 }
-output table th {
+output table#stipends th {
   border-bottom: 1px solid black;
+}
+@media screen and (max-width: 480px) {
+  output table#stipends td,
+  output table#stipends th {
+    padding: 10px 10px 4px 10px;
+  }
+  output {
+    padding: 20px;
+  }
 }
 </style>
