@@ -28,7 +28,7 @@ function autorun() {
     let body = ``;
     for (datum of data) {
       const datumRow = `
-<tr><td>${datum.AdultCaseCount}</td><td>${datum.ChildCaseCount}</td><td>${datum.TotalPositiveCount}</td><td>${datum.CloseContactsCount}</td><td>${datum.CaseCountDate":"2021-12-16T00:00:00-06:00","TotalTestCount}</td><td>${datum.TestedPositiveCount}</td><td>${datum.InvalidTestCount}</td><td>${datum.AdultTestCount}</td><td>${datum.ChildTestCount}</td></tr>`;
+<tr><td>${datum.AdultCaseCount}</td><td>${datum.ChildCaseCount}</td><td>${datum.TotalPositiveCount}</td><td>${datum.CloseContactsCount}</td><td>${datum.CaseCountDate}</td><td>${datum.TotalTestCount}</td><td>${datum.TestedPositiveCount}</td><td>${datum.InvalidTestCount}</td><td>${datum.AdultTestCount}</td><td>${datum.ChildTestCount}</td></tr>`;
       body += datumRow;
     }
     const footer = "</tbody></table>";
