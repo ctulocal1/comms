@@ -1,4 +1,9 @@
 function autorun() {
+  let commify = function (numberString) {
+    const number = parseInt(numberString);
+    const returnString = number.toLocaleString();
+    return returnString;
+  }
   let convertDate = function (datestring) {
     let date = new Date(datestring);
     const dd = String(date.getDate()).padStart(2, '0');
@@ -22,14 +27,14 @@ function autorun() {
     const header = `
 <table>
   <thead>
-    <tr><th scope="col">Adult Case Count</th><th scope="col">Child Case Count</th><th scope="col">Total Positive Count</th><th scope="col">Close Contacts Count</th><th scope="col">Case Count Date</th><th scope="col">Total Test Count</th><th scope="col">Tested Positive Count</th><th scope="col">Invalid Test Count</th><th scope="col">Adult Test Count</th><th scope="col">Child Test Count</th></tr>
+    <tr><th scope="col">Case Count Date</th><th scope="col">Adult Case Count</th><th scope="col">Child Case Count</th><th scope="col">Total Positive Count</th><th scope="col">Close Contacts Count</th><th scope="col">Total Test Count</th><th scope="col">Tested Positive Count</th><th scope="col">Invalid Test Count</th><th scope="col">Adult Test Count</th><th scope="col">Child Test Count</th></tr>
   </thead>
 <tbody>
 `
     let body = ``;
     for (datum of data) {
       const datumRow = `
-<tr><td>${datum.AdultCaseCount}</td><td>${datum.ChildCaseCount}</td><td>${datum.TotalPositiveCount}</td><td>${datum.CloseContactsCount}</td><td>${convertDate(datum.CaseCountDate)}</td><td>${datum.TotalTestCount}</td><td>${datum.TestedPositiveCount}</td><td>${datum.InvalidTestCount}</td><td>${datum.AdultTestCount}</td><td>${datum.ChildTestCount}</td></tr>`;
+<tr><td>${convertDate(datum.CaseCountDate)}</td><td>${commify(datum.AdultCaseCount)}</td><td>${commify(datum.ChildCaseCount)}</td><td>${commify(datum.TotalPositiveCount)}</td><td>${commify(datum.CloseContactsCount)}</td><td>${commify(datum.TotalTestCount)}</td><td>${commify(datum.TestedPositiveCount)}</td><td>${commify(datum.InvalidTestCount)}</td><td>${commify(datum.AdultTestCount)}</td><td>${commify(datum.ChildTestCount)}</td></tr>`;
       body += datumRow;
     }
     const footer = "</tbody></table>";

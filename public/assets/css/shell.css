@@ -4,7 +4,7 @@
 body {
   margin:0;
   padding: 0;
-  background: #83181f;
+  background: #ddd;
   box-sizing: border-box;
   font-family: 'noto sans', 'open sans',roboto,sans;
   --smallest: 12px;
@@ -76,7 +76,7 @@ a:focus {
 /* Section Styles */
 /******************/
 header {
-  background: #111018;
+  background: #83181f;
   color: white;
   max-height: 50px;
 }
@@ -127,8 +127,8 @@ footer {
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
-  background: #bbb;
-  color: #333;
+  background: #111018;
+  color: #fafafa;
   text-align: center;
   vertical-align: top;
 }
