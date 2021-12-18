@@ -20,7 +20,8 @@
   <main>
     <h1>Pull Data from the CPS API</h1>
 
-    <label for="cpsid">CPS Employee ID: <input type="text" id="cpsid"></label>
+    <label for="start">Start Date: <input type="date" id="start"></label>
+    <label for="end">end Date: <input type="date" id="end"></label>
     <button id="lookup" type="submit">Lookup</button>
 
     <output id="stipend" for="cpsid"></output>
@@ -31,7 +32,7 @@
     </p>
   </footer>
 
-  <script type="text/javascript" src="/assets/js/stipends-frontend.js"></script>
+  <script type="text/javascript" src="/assets/js/cps-api-testing-daily.js"></script>
   <script type="text/javascript">
    if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
    else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
