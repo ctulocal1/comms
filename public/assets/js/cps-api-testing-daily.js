@@ -33,7 +33,6 @@ function autorun() {
       body += datumRow;
     }
     const footer = "</tbody></table>";
-    datastring = JSON.stringify(data);
     output.innerHTML = header + body + footer;
   });
 }
