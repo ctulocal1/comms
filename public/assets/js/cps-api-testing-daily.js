@@ -21,7 +21,7 @@ function autorun() {
     const header = `
 <table>
   <thead>
-    <tr><th scope="col">AdultCaseCount</th><th scope="col">ChildCaseCount</th><th scope="col">TotalPositiveCount</th><th scope="col">CloseContactsCount</th><th scope="col">CaseCountDate":"2021-12-16T00:00:00-06:00","TotalTestCount</th><th scope="col">TestedPositiveCount</th><th scope="col">InvalidTestCount</th><th scope="col">AdultTestCount</th><th scope="col">ChildTestCount</th></tr>
+    <tr><th scope="col">Adult Case Count</th><th scope="col">Child Case Count</th><th scope="col">Total Positive Count</th><th scope="col">Close Contacts Count</th><th scope="col">Case Count Date</th><th scope="col">Total Test Count</th><th scope="col">Tested Positive Count</th><th scope="col">Invalid Test Count</th><th scope="col">Adult Test Count</th><th scope="col">Child Test Count</th></tr>
   </thead>
 <tbody>
 `
