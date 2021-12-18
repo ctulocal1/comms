@@ -1,10 +1,11 @@
 function autorun() {
-  let dollarize = function (amount) {
-    let formatted = new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
-    }).format(amount);
+  let convertDate = function (datestring) {
+    let date = new Date(datestring);
+    const dd = String(date.getDate()).padStart(2, '0');
+    const mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
+    const yyyy = date.getFullYear();
+
+    const formatted = mm + '/' + dd + '/' + yyyy;
     return formatted;
   } 
   const lookup = document.getElementById("lookup"); 
@@ -28,7 +29,7 @@ function autorun() {
     let body = ``;
     for (datum of data) {
       const datumRow = `
-<tr><td>${datum.AdultCaseCount}</td><td>${datum.ChildCaseCount}</td><td>${datum.TotalPositiveCount}</td><td>${datum.CloseContactsCount}</td><td>${datum.CaseCountDate}</td><td>${datum.TotalTestCount}</td><td>${datum.TestedPositiveCount}</td><td>${datum.InvalidTestCount}</td><td>${datum.AdultTestCount}</td><td>${datum.ChildTestCount}</td></tr>`;
+<tr><td>${datum.AdultCaseCount}</td><td>${datum.ChildCaseCount}</td><td>${datum.TotalPositiveCount}</td><td>${datum.CloseContactsCount}</td><td>${convertDate(datum.CaseCountDate)}</td><td>${datum.TotalTestCount}</td><td>${datum.TestedPositiveCount}</td><td>${datum.InvalidTestCount}</td><td>${datum.AdultTestCount}</td><td>${datum.ChildTestCount}</td></tr>`;
       body += datumRow;
     }
     const footer = "</tbody></table>";
