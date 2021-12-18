@@ -12,8 +12,9 @@ function autorun() {
   const end = document.getElementById("end");
   const output = document.getElementById("stipend");
   lookup.addEventListener("click", async () => {
-    let id = cpsid.value;
-    let fetchURL = `https://api.cps.edu/health/CPS/District2021DailyCOVIDTesting?StartDate=${start}&EndDate=${end}`;
+    let startDate = start.value;
+    let endDate = end.value;
+    let fetchURL = `https://api.cps.edu/health/CPS/District2021DailyCOVIDTesting?StartDate=${startDate}&EndDate=${endDate}`;
     let data = await fetch(fetchURL).then(
       response => response.json()
     );
