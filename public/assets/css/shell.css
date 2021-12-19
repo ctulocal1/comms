@@ -84,7 +84,7 @@ header nav {
   width: 100vw;
   max-width: 880px;
   margin: 0 auto;
-  padding: 5px 20px;
+  padding: 5px 36px;
   box-sizing: border-box;
 }
 header nav ul {
@@ -96,7 +96,7 @@ header nav ul {
   align-items: center;
 }
 header li {
-  line-height: 30px;
+  line-height: 20px;
   font-size: 20px;
   height: 40px;
 }

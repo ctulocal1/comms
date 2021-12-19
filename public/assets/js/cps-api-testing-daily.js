@@ -16,8 +16,9 @@ function autorun() {
   const lookup = document.getElementById("lookup"); 
   const start = document.getElementById("start");
   const end = document.getElementById("end");
-  const output = document.getElementById("stipend");
+  const output = document.getElementById("dataTable");
   lookup.addEventListener("click", async () => {
+    output.innerText = "Querying CPS API";
     let startDate = start.value;
     let endDate = end.value;
     let fetchURL = `https://api.cps.edu/health/CPS/District2021DailyCOVIDTesting?StartDate=${startDate}&EndDate=${endDate}`;
@@ -25,11 +26,17 @@ function autorun() {
       response => response.json()
     );
     const header = `
-<table>
-  <thead>
-    <tr><th scope="col">Case Count Date</th><th scope="col">Adult Case Count</th><th scope="col">Child Case Count</th><th scope="col">Total Positive Count</th><th scope="col">Close Contacts Count</th><th scope="col">Total Test Count</th><th scope="col">Tested Positive Count</th><th scope="col">Invalid Test Count</th><th scope="col">Adult Test Count</th><th scope="col">Child Test Count</th></tr>
-  </thead>
-<tbody>
+  <p>
+    <button class="btn" data-clipboard-target="#dataTable">
+      <img src="/assets/img/copied.svg" alt="Copy table to clipboard" style="height: 1.6em; margin: 8px;"/>
+    </button>
+    <span id="copiedMsg"></span>
+  </p>
+  <table>
+    <thead>
+      <tr><th scope="col">Case Count Date</th><th scope="col">Adult Case Count</th><th scope="col">Child Case Count</th><th scope="col">Total Positive Count</th><th scope="col">Close Contacts Count</th><th scope="col">Total Test Count</th><th scope="col">Tested Positive Count</th><th scope="col">Invalid Test Count</th><th scope="col">Adult Test Count</th><th scope="col">Child Test Count</th></tr>
+    </thead>
+  <tbody>
 `
     let body = ``;
     for (datum of data) {
@@ -39,5 +46,34 @@ function autorun() {
     }
     const footer = "</tbody></table>";
     output.innerHTML = header + body + footer;
+    myClipboard(output);
   });
+}
+
+function myClipboard (output) {
+    // ClipboardJS loaded with separate call in page body
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+
+        sayCopied(output);
+
+        e.clearSelection();
+    });
+
+    clipboard.on('error', function (e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+    });
+}
+
+function sayCopied (output) {
+    output.style.background = "#222299";
+    let unhighlight = setTimeout( () => output.style.background = "transparent", 300);
+    const msgTarget = document.getElementById("copiedMsg");
+    msgTarget.innerText = "Table copied to clipboard";
+    let disappear = setTimeout( () => msgTarget.innerText = '', 1400);
 }

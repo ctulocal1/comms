@@ -19,15 +19,15 @@
     </nav>
   </header>
   <main>
-    <h1>Daily Testing by Date Range</h1>
-
+    <h1>District-wide daily testing</h1>
+    <h2>Select the date range for your query</h2>
     <p>
       <label for="start">Start Date: <input type="date" id="start"></label>
       <label for="end">End Date: <input type="date" id="end"></label>
       <button id="lookup" type="submit">Lookup</button>
     </p>
 
-    <output id="stipend" for="cpsid"></output>
+    <output id="dataTable"></output>
   </main>
 
   <footer>
@@ -35,6 +35,7 @@
     </p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
   <script type="text/javascript" src="/assets/js/cps-api-testing-daily.js"></script>
   <script type="text/javascript">
    if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
