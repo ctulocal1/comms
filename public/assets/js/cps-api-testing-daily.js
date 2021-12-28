@@ -28,7 +28,7 @@ function autorun() {
     const header = `
   <p>
     <button class="btn" data-clipboard-target="#dataTable">
-      <img src="/assets/img/copied.svg" alt="Copy table to clipboard" style="height: 1.6em; margin: 8px;"/>
+      <img src="/assets/img/copied.svg" alt="" style="height: 1.6em; margin: 8px;"/>Copy table to clipboard
     </button>
     <span id="copiedMsg"></span>
   </p>

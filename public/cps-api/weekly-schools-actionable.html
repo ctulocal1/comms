@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Daily Test Data by Range | CPS-API</title>
+  <title>Weekly Schools Actionable</title>
   <meta name="author" content="Nathan Goldbaum">
-  <meta name="description" content="Get CPS district-wide totals on testing for each week.">
+  <meta name="description" content="Get weekly data on COVID actionable cases in CPS.">
   <link rel="stylesheet" type="text/css" href="/assets/css/shell.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/api.css">
 
@@ -19,15 +19,12 @@
     </nav>
   </header>
   <main>
-    <h1>District-wide daily testing</h1>
-    <h2>Select the date range for your query</h2>
+    <h1>Weekly Schools Actionable</h1>
     <p>
-      <label for="start">Start Date: <input type="date" id="start"></label>
-      <label for="end">End Date: <input type="date" id="end"></label>
       <button id="lookup" type="submit">Lookup</button>
     </p>
 
-    <output id="dataTable"></output>
+    <output id="dataOutput"></output>
   </main>
 
   <footer>
@@ -36,7 +33,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
-  <script type="text/javascript" src="/assets/js/cps-api-testing-daily.js"></script>
+  <script type="text/javascript" src="/assets/js/cps-api-weekly-schools-actionable.js"></script>
   <script type="text/javascript">
    if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
    else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);

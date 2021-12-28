@@ -1,5 +1,5 @@
-output {
-  margin: 20px 0;
+p {
+  padding: 0 0 40px 0;
 }
 table {
   margin: 20px auto;
