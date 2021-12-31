@@ -21,10 +21,15 @@
   <main>
     <h1>Weekly Schools Actionable</h1>
     <p>
-      <button id="lookup" type="submit">Lookup</button>
+    This page queries the CPS API for all the weeks in which each school has reported “actionable cases” of COVID. It includes the latest case and contact counts, the most recent week in which a case was reported, the number of weeks in which cases have been reported for SY2021-22 and sums all the cases and contacts reported by CPS this year. The table is sorted alphabetically by school name, just as the CPS output is. To resort, use the Copy to Clipboard button and paste the data into a separate spreadsheet.
     </p>
+    <h2>Query activity log</h2>
+    <div style="background: #ddd; padding: 10px;">
     <output id="queryOutput"></output>
-
+    </div>
+    <p id="buttons">
+      <button id="lookup" type="submit">Resend Query</button>
+    </p>
     <output id="dataOutput"></output>
   </main>
 

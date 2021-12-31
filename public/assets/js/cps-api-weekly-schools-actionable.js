@@ -4,18 +4,22 @@
 function autorun() {
   const lookup = document.getElementById("lookup"); 
   const dataDisplay = document.getElementById("dataOutput");
+  const buttons = document.getElementById("buttons");
   const progress = document.getElementById("queryOutput");
   lookup.addEventListener("click", async () => {
     //
     // Sending query
     const sentQuery = new Date();
-    progress.innerText = "Query sent to CPS API at " + sentQuery + ".";
+    progress.innerText = "Query sent to CPS API at " + sentQuery + ".\nAwaiting Response.";
     const fetchURL = `https://api.cps.edu/health/cps/schoolweeklycovidactionable?startdate=2021-08-20`;
+    let counting = setInterval (function() { progress.innerText += "." }, 1000);
+    buttons.style.visibility = "visible";
     let data = await fetch(fetchURL).then(
       response => response.json()
     );
     //
     // Upon query's return
+    clearInterval(counting);
     const responseTime = new Date() - sentQuery;
     progress.innerText += `
       Query response returned in ${responseTime/1000} seconds. 
@@ -26,20 +30,19 @@ function autorun() {
     const bySchool = GroupDataBySchool(data);
     dataTable = renderTable(bySchool);
     dataDisplay.appendChild(dataTable);
-    progress.innerHTML +=`
-    <p>
-      <button class="btn" data-clipboard-target="#dataOutput" style="display:flex; align-items: center; justify-content:center;">
+    buttons.innerHTML +=`
+      <button class="btn" data-clipboard-target="#dataOutput">
         <img src="/assets/img/copied.svg" alt="" style="height: 1.6em; margin: 8px;"/>
         <span>Copy table to clipboard</span>
       </button>
       <span id="copiedMsg"></span>
-    </p>
     `
 
     //
     // Activate copy to clipboard
     myClipboard(dataDisplay);
   });
+  lookup.click();
   return false;
 }
 
@@ -154,7 +157,8 @@ function myClipboard (dataDisplay) {
     console.info('Text:', e.text);
     console.info('Trigger:', e.trigger);
 
-    sayCopied(dataDisplay);
+    const msgTarget = document.getElementById("copiedMsg");
+    msgTarget.innerText = "Table copied to clipboard";
 
     e.clearSelection();
   });
@@ -163,12 +167,4 @@ function myClipboard (dataDisplay) {
     console.error('Action:', e.action);
     console.error('Trigger:', e.trigger);
   });
-}
-
-function sayCopied (dataDisplay) {
-  dataDisplay.style.background = "#222299";
-  let unhighlight = setTimeout( () => dataDisplay.style.background = "transparent", 300);
-  const msgTarget = document.getElementById("copiedMsg");
-  msgTarget.innerText = "Table copied to clipboard";
-  let disappear = setTimeout( () => msgTarget.innerText = '', 1400);
 }
