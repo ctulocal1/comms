@@ -31,11 +31,13 @@ function autorun() {
     // 
     // Convert data and render to table
     bySchool = GroupDataBySchool(data,weekPicker);
-    let selectedDate = weekPicker.value;
+    let selectedDate = weekPicker.options[weekPicker.selectedIndex];
+    let selectedDateValue = selectedDate.value;
+    let selectedDateText = selectedDate.text;
     console.log(selectedDate);
-    let ordered = orderRows(selectedDate,bySchool)
+    let ordered = orderRows(selectedDateValue,bySchool)
     dataTable = renderTable(ordered);
-    dataDisplay.innerHTML = `<h3>Current and Cumulative Cases for the week ending ${selectedDate}</h3>`;
+    dataDisplay.innerHTML = `<h3>Case Counts for the week ending ${selectedDateText}</h3>`;
     dataDisplay.appendChild(dataTable);
     buttons.style.visibility = "visible";
 
@@ -45,12 +47,14 @@ function autorun() {
   });
   lookup.click();
   weekPicker.addEventListener ( "change", () => {
-      const selectedDate = weekPicker.value
-      let ordered = orderRows(selectedDate,bySchool);
-      dataTable = renderTable(ordered);
-      dataDisplay.innerHTML = `<h3>Current and Cumulative Cases for the week ending ${selectedDate}</h3>`;
-      dataDisplay.appendChild(dataTable);
-    });
+    const selectedDate = weekPicker.options[weekPicker.selectedIndex];
+    const selectedDateValue = selectedDate.value;
+    const selectedDateText =  selectedDate.text;
+    let ordered = orderRows(selectedDateValue,bySchool);
+    dataTable = renderTable(ordered);
+    dataDisplay.innerHTML = `<h3>Case Counts for the week ending ${selectedDateText}</h3>`;
+    dataDisplay.appendChild(dataTable);
+  });
   return false;
 }
 
