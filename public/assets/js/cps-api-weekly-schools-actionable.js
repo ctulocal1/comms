@@ -13,7 +13,7 @@ function autorun() {
     // Sending query
     dataDisplay.innerHTML = "";
     const sentQuery = new Date();
-    progress.innerText = "Query sent to CPS API at " + sentQuery + ". This can take up to 30 seconds.\nAwaiting Response.";
+    progress.innerText = "Query sent to CPS API at " + sentQuery + ". Response can take up to a minute or longer, depending on network traffic.\nAwaiting Response.";
     const fetchURL = `https://api.cps.edu/health/cps/schoolweeklycovidactionable?startdate=2021-08-20`;
     let counting = setInterval (function() { progress.innerText += "." }, 1000);
     buttons.style.visibility = "visible";
