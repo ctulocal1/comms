@@ -19,7 +19,6 @@ tbody td {
 }
 p#buttons {
   padding: 40px 0 0 0;
-  visibility: hidden;
   display:flex;
   align-items: left;
   gap: 10px;
@@ -29,4 +28,7 @@ p#buttons button {
   display:flex;
   align-items: center;
   justify-content:center;
+}
+.btn {
+  visibility: hidden;
 }

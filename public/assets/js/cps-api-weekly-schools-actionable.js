@@ -4,11 +4,14 @@
 function autorun() {
   const lookup = document.getElementById("lookup"); 
   const dataDisplay = document.getElementById("dataOutput");
-  const buttons = document.getElementById("buttons");
+  const buttons = document.querySelector("#buttons .btn");
+  const weekPicker = document.getElementById("weeks");
   const progress = document.getElementById("queryOutput");
+  let bySchool = [];
   lookup.addEventListener("click", async () => {
     //
     // Sending query
+    dataDisplay.innerHTML = "";
     const sentQuery = new Date();
     progress.innerText = "Query sent to CPS API at " + sentQuery + ". This can take up to 30 seconds.\nAwaiting Response.";
     const fetchURL = `https://api.cps.edu/health/cps/schoolweeklycovidactionable?startdate=2021-08-20`;
@@ -27,31 +30,70 @@ function autorun() {
 `;
     // 
     // Convert data and render to table
-    const bySchool = GroupDataBySchool(data);
-    dataTable = renderTable(bySchool);
+    bySchool = GroupDataBySchool(data,weekPicker);
+    let selectedDate = weekPicker.value;
+    console.log(selectedDate);
+    let ordered = orderRows(selectedDate,bySchool)
+    dataTable = renderTable(ordered);
+    dataDisplay.innerHTML = `<h3>Current and Cumulative Cases for the week ending ${selectedDate}</h3>`;
     dataDisplay.appendChild(dataTable);
-    buttons.innerHTML +=`
-      <button class="btn" data-clipboard-target="#dataOutput">
-        <img src="/assets/img/copied.svg" alt="" style="height: 1.6em; margin: 8px;"/>
-        <span>Copy table to clipboard</span>
-      </button>
-      <span id="copiedMsg"></span>
-    `
+    buttons.style.visibility = "visible";
 
     //
     // Activate copy to clipboard
     myClipboard(dataDisplay);
   });
   lookup.click();
+  weekPicker.addEventListener ( "change", () => {
+      const selectedDate = weekPicker.value
+      let ordered = orderRows(selectedDate,bySchool);
+      dataTable = renderTable(ordered);
+      dataDisplay.innerHTML = `<h3>Current and Cumulative Cases for the week ending ${selectedDate}</h3>`;
+      dataDisplay.appendChild(dataTable);
+    });
   return false;
+}
+
+function orderRows (selected,schools) {
+  let rows = [];
+  for (school of schools) {
+    const row = {
+      name: school.Name,
+      wkCases: 0,
+      wkContacts: 0,
+      wksReporting: 0,
+      YTDcases: 0,
+      YTDcontacts:0
+    }
+    let matchWeek = school.Weeks.find( week => week.End === selected );
+    if (matchWeek) {
+      console.log(matchWeek);
+      row.wkCases = matchWeek.Cases;
+      row.wkContacts = matchWeek.Contacts;
+    }
+    for (week of school.Weeks) {
+      if (week.End === selected || week.End < selected) {
+        row.YTDcases += week.Cases;
+        row.YTDcontacts += week.Contacts;
+        row.wksReporting++;
+      }
+    }
+    rows.push(row)
+  }
+  rows.sort( (a,b) => b.wkCases - a.wkCases);
+  console.log(rows);
+  return rows;
 }
 
 // Data comes from the API as complete record for each week, including school.
 // This groups all the weeks for each school into one object as an item in the array.
-function GroupDataBySchool (data) {
+function GroupDataBySchool (data,weekPicker) {
+  let dateSet = new Set();
   let schoolsData = []; // This array is returned after processing.
   for (datum of data) {
     let schoolData = schoolsData.find(school => school.SchoolID === datum.SchoolID);
+
+    dateSet.add(datum.WeekEndDate);
 
     if (schoolData) { // If school is already in the array push this week's data.
       const week = {};
@@ -79,6 +121,14 @@ function GroupDataBySchool (data) {
     }// end of else
 
   } // end of for loop over data
+    let dateArray = [...dateSet];
+    dateArray = dateArray.sort().reverse();
+    let dates = [];
+    for (date of dateArray) {
+      const dateval = new Date(date);
+      const dateString =  new Intl.DateTimeFormat('en-US', {month:"short",day:"2-digit"}).format(dateval).toUpperCase();
+      weekPicker.innerHTML += `<option value="${date}">${dateString}</option>`;
+    }
   return schoolsData;
   // console.log(schoolsData);
 }
@@ -92,7 +142,6 @@ function renderTable(data) {
     <thead>
       <tr>
         <th scope="col">School Name</th>
-        <th scope="col">Latest Week End Date</th>
         <th scope="col">Latest Case Count</th>
         <th scope="col">Latest Contact Count</th>
         <th scope="col"># Weeks Reporting</th>
@@ -105,22 +154,13 @@ function renderTable(data) {
   let tbody = document.createElement("tbody");
 
   for (datum of data) {
-    const weeks = datum.Weeks;
-    const allCases = datum.Weeks.map( item => item.Cases );
-    const allContacts = datum.Weeks.map( item => item.Contacts );
-    const sum = (item1, item2) => item1 + item2;
-    const YTDcases = allCases.reduce(sum);
-    const YTDcontacts = allContacts.reduce(sum);
-    weeks.sort( (a,b) => a.End - b.End);
-    // console.log(datum);
     let tr = document.createElement("tr"); 
-    tr.innerHTML  = `<td>${datum.Name}</td>`;
-    tr.innerHTML += `<td>${convertDate(weeks[0].End)}</td>`
-    tr.innerHTML += `<td>${commify(weeks[0].Cases)}</td>`
-    tr.innerHTML += `<td>${commify(weeks[0].Contacts)}</td>`
-    tr.innerHTML += `<td>${commify(weeks.length)}</td>`
-    tr.innerHTML += `<td>${commify(YTDcases)}</td>`
-    tr.innerHTML += `<td>${commify(YTDcontacts)}</td>`
+    tr.innerHTML  = `<td>${datum.name}</td>`;
+    tr.innerHTML += `<td>${commify(datum.wkCases)}</td>`
+    tr.innerHTML += `<td>${commify(datum.wkContacts)}</td>`
+    tr.innerHTML += `<td>${commify(datum.wksReporting)}</td>`
+    tr.innerHTML += `<td>${commify(datum.YTDcases)}</td>`
+    tr.innerHTML += `<td>${commify(datum.YTDcontacts)}</td>`
     tbody.appendChild(tr);
   }
   table.appendChild(tbody);
@@ -141,7 +181,7 @@ function convertDate (datestring) {
   const mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
   const yyyy = date.getFullYear();
 
-  const formatted = mm + '/' + dd + '/' + yyyy;
+  const formatted = yyyy + '-' + mm + '-' + dd;
   return formatted;
 } 
 

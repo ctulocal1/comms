@@ -21,7 +21,7 @@
   <main>
     <h1>Weekly Schools Actionable</h1>
     <p>
-    This page queries the CPS API for all the weeks in which each school has reported “actionable cases” of COVID. It includes the latest case and contact counts, the most recent week in which a case was reported, the number of weeks in which cases have been reported for SY2021-22 and sums all the cases and contacts reported by CPS this year. The table is sorted alphabetically by school name, just as the CPS output is. To resort, use the Copy to Clipboard button and paste the data into a separate spreadsheet.
+    This page queries the CPS API for all the weeks in which each school has reported “actionable cases” of COVID. You can query for any week in which a school has recorded cases this school year, according to CPS data. The default value is the most recent week (and could include the current week, which has not yet come to an end). Use the dropdown to change the week selected. Results are ordered by most cases in the week selected. Cumulative YTD data is based on cases up to and including the selected week. To copy this data into another spreadsheet for analysis, click the button that says “copy to clipboard.”
     </p>
     <h2>Query activity log</h2>
     <div style="background: #ddd; padding: 10px;">
@@ -29,6 +29,14 @@
     </div>
     <p id="buttons">
       <button id="lookup" type="submit">Resend Query</button>
+      <label for="weeks">Show data for week ending: </label>
+      <select name="weeks-select" id="weeks">
+      </select>
+      <button class="btn" data-clipboard-target="#dataOutput">
+        <img src="/assets/img/copied.svg" alt="" style="height: 1.6em; margin: 8px;"/>
+        <span>Copy table to clipboard</span>
+      </button>
+      <span id="copiedMsg"></span>
     </p>
     <output id="dataOutput"></output>
   </main>
