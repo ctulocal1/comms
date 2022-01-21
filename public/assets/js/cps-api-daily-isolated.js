@@ -78,7 +78,7 @@ function orderRows (selected,schools) {
       row.persons = matchDate.persons;
       row.population = school.population;
       row.percent = Math.round( 1000 * row.persons / row.population )/10;
-      rows.push(row)
+      if (row.population > 0) { rows.push(row) }
     }
   }
   console.log(rows);
