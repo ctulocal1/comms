@@ -1,0 +1,2568 @@
+{
+  id: "609977",
+  shortName: "WOODLAWN",
+  staff: 19
+},
+{
+  id: "609964",
+  shortName: "HAMLINE",
+  staff: 73
+},
+{
+  id: "610021",
+  shortName: "CASALS",
+  staff: 46
+},
+{
+  id: "610097",
+  shortName: "NIXON",
+  staff: 71
+},
+{
+  id: "609945",
+  shortName: "GOUDY",
+  staff: 74
+},
+{
+  id: "610047",
+  shortName: "MADISON",
+  staff: 28
+},
+{
+  id: "610226",
+  shortName: "SANDOVAL",
+  staff: 84
+},
+{
+  id: "610167",
+  shortName: "SEWARD",
+  staff: 58
+},
+{
+  id: "609921",
+  shortName: "TELPOCHCALLI",
+  staff: 39
+},
+{
+  id: "610354",
+  shortName: "NORTH RIVER",
+  staff: 35
+},
+{
+  id: "609821",
+  shortName: "BURNHAM",
+  staff: 64
+},
+{
+  id: "609902",
+  shortName: "METCALFE",
+  staff: 46
+},
+{
+  id: "610115",
+  shortName: "PARK MANOR",
+  staff: 37
+},
+{
+  id: "610347",
+  shortName: "CLAREMONT",
+  staff: 72
+},
+{
+  id: "610100",
+  shortName: "WEST PARK",
+  staff: 59
+},
+{
+  id: "610256",
+  shortName: "ROBINSON",
+  staff: 22
+},
+{
+  id: "610298",
+  shortName: "LENART",
+  staff: 27
+},
+{
+  id: "610098",
+  shortName: "NOBEL",
+  staff: 66
+},
+{
+  id: "609859",
+  shortName: "CLINTON",
+  staff: 102
+},
+{
+  id: "610192",
+  shortName: "STOWE",
+  staff: 74
+},
+{
+  id: "609854",
+  shortName: "CHOPIN",
+  staff: 60
+},
+{
+  id: "609894",
+  shortName: "DRAKE",
+  staff: 41
+},
+{
+  id: "609958",
+  shortName: "GUNSAULUS",
+  staff: 75
+},
+{
+  id: "610559",
+  shortName: "SHIELDS MIDDLE",
+  staff: 62
+},
+{
+  id: "609926",
+  shortName: "FRANKLIN",
+  staff: 36
+},
+{
+  id: "609949",
+  shortName: "GRAY",
+  staff: 97
+},
+{
+  id: "609872",
+  shortName: "PEREZ",
+  staff: 39
+},
+{
+  id: "610234",
+  shortName: "YATES",
+  staff: 67
+},
+{
+  id: "609939",
+  shortName: "GILLESPIE",
+  staff: 50
+},
+{
+  id: "610125",
+  shortName: "RUIZ",
+  staff: 65
+},
+{
+  id: "609879",
+  shortName: "DAWES",
+  staff: 113
+},
+{
+  id: "610350",
+  shortName: "BLACK",
+  staff: 45
+},
+{
+  id: "609830",
+  shortName: "BRUNSON",
+  staff: 49
+},
+{
+  id: "609819",
+  shortName: "BURKE",
+  staff: 47
+},
+{
+  id: "610037",
+  shortName: "LIBBY",
+  staff: 45
+},
+{
+  id: "610078",
+  shortName: "INTER-AMERICAN",
+  staff: 72
+},
+{
+  id: "609991",
+  shortName: "HERZL",
+  staff: 77
+},
+{
+  id: "609920",
+  shortName: "KANOON",
+  staff: 51
+},
+{
+  id: "609912",
+  shortName: "FARNSWORTH",
+  staff: 76
+},
+{
+  id: "609895",
+  shortName: "TURNER-DREW",
+  staff: 33
+},
+{
+  id: "610135",
+  shortName: "PORTAGE PARK",
+  staff: 94
+},
+{
+  id: "609994",
+  shortName: "HIBBARD",
+  staff: 90
+},
+{
+  id: "609788",
+  shortName: "BARNARD",
+  staff: 36
+},
+{
+  id: "609935",
+  shortName: "GALLISTEL",
+  staff: 72
+},
+{
+  id: "610171",
+  shortName: "MIRELES",
+  staff: 52
+},
+{
+  id: "610088",
+  shortName: "MOZART",
+  staff: 67
+},
+{
+  id: "610107",
+  shortName: "OTIS",
+  staff: 65
+},
+{
+  id: "610362",
+  shortName: "EVERS",
+  staff: 32
+},
+{
+  id: "609933",
+  shortName: "GALE",
+  staff: 49
+},
+{
+  id: "610024",
+  shortName: "CARDENAS",
+  staff: 108
+},
+{
+  id: "609947",
+  shortName: "GRAHAM ES",
+  staff: 47
+},
+{
+  id: "610249",
+  shortName: "TALMAN",
+  staff: 56
+},
+{
+  id: "610004",
+  shortName: "CULLEN",
+  staff: 21
+},
+{
+  id: "610284",
+  shortName: "NEW FIELD",
+  staff: 78
+},
+{
+  id: "610206",
+  shortName: "TWAIN",
+  staff: 93
+},
+{
+  id: "610105",
+  shortName: "ORIOLE PARK",
+  staff: 65
+},
+{
+  id: "609834",
+  shortName: "LITTLE VILLAGE",
+  staff: 82
+},
+{
+  id: "609979",
+  shortName: "HEALY",
+  staff: 102
+},
+{
+  id: "610096",
+  shortName: "NIGHTINGALE",
+  staff: 110
+},
+{
+  id: "610271",
+  shortName: "JENSEN",
+  staff: 43
+},
+{
+  id: "610132",
+  shortName: "POE",
+  staff: 26
+},
+{
+  id: "610325",
+  shortName: "AVONDALE-LOGANDALE",
+  staff: 71
+},
+{
+  id: "609861",
+  shortName: "CLISSOLD",
+  staff: 74
+},
+{
+  id: "610174",
+  shortName: "SHIELDS",
+  staff: 63
+},
+{
+  id: "609883",
+  shortName: "DENEEN",
+  staff: 60
+},
+{
+  id: "609922",
+  shortName: "BELMONT-CRAGIN",
+  staff: 69
+},
+{
+  id: "610057",
+  shortName: "FAIRFIELD",
+  staff: 55
+},
+{
+  id: "610027",
+  shortName: "KIPLING",
+  staff: 38
+},
+{
+  id: "610180",
+  shortName: "SMYTH",
+  staff: 64
+},
+{
+  id: "610217",
+  shortName: "WARD J",
+  staff: 57
+},
+{
+  id: "610228",
+  shortName: "WHITTIER",
+  staff: 28
+},
+{
+  id: "610352",
+  shortName: "DURKIN PARK",
+  staff: 82
+},
+{
+  id: "610396",
+  shortName: "TARKINGTON",
+  staff: 106
+},
+{
+  id: "610317",
+  shortName: "BRIGHTON PARK",
+  staff: 45
+},
+{
+  id: "609961",
+  shortName: "NINOS HEROES",
+  staff: 39
+},
+{
+  id: "610221",
+  shortName: "WEBSTER",
+  staff: 34
+},
+{
+  id: "609899",
+  shortName: "EBINGER",
+  staff: 77
+},
+{
+  id: "610539",
+  shortName: "CAMRAS",
+  staff: 90
+},
+{
+  id: "609956",
+  shortName: "GRIMES",
+  staff: 49
+},
+{
+  id: "610179",
+  shortName: "SMYSER",
+  staff: 80
+},
+{
+  id: "610076",
+  shortName: "MOOS",
+  staff: 59
+},
+{
+  id: "609938",
+  shortName: "GARY",
+  staff: 94
+},
+{
+  id: "610542",
+  shortName: "WEST RIDGE",
+  staff: 82
+},
+{
+  id: "609928",
+  shortName: "FULLER",
+  staff: 46
+},
+{
+  id: "610269",
+  shortName: "MCCUTCHEON",
+  staff: 68
+},
+{
+  id: "610182",
+  shortName: "SOLOMON",
+  staff: 47
+},
+{
+  id: "610010",
+  shortName: "JAHN",
+  staff: 52
+},
+{
+  id: "610158",
+  shortName: "SAYRE",
+  staff: 60
+},
+{
+  id: "610520",
+  shortName: "LASALLE II",
+  staff: 64
+},
+{
+  id: "610276",
+  shortName: "MOLLISON",
+  staff: 37
+},
+{
+  id: "609944",
+  shortName: "GRISSOM",
+  staff: 40
+},
+{
+  id: "610099",
+  shortName: "NORWOOD PARK",
+  staff: 40
+},
+{
+  id: "609857",
+  shortName: "CLEVELAND",
+  staff: 73
+},
+{
+  id: "610193",
+  shortName: "NEW SULLIVAN",
+  staff: 70
+},
+{
+  id: "610185",
+  shortName: "STEVENSON",
+  staff: 132
+},
+{
+  id: "609937",
+  shortName: "GARVY",
+  staff: 66
+},
+{
+  id: "610342",
+  shortName: "SABIN",
+  staff: 52
+},
+{
+  id: "610086",
+  shortName: "MOUNT VERNON",
+  staff: 28
+},
+{
+  id: "609918",
+  shortName: "FIELD",
+  staff: 19
+},
+{
+  id: "609779",
+  shortName: "ARMSTRONG G",
+  staff: 117
+},
+{
+  id: "609942",
+  shortName: "GOETHE",
+  staff: 78
+},
+{
+  id: "610137",
+  shortName: "PRUSSING",
+  staff: 66
+},
+{
+  id: "610533",
+  shortName: "PRIETO",
+  staff: 90
+},
+{
+  id: "609772",
+  shortName: "ADDAMS",
+  staff: 60
+},
+{
+  id: "610091",
+  shortName: "BROWN R",
+  staff: 34
+},
+{
+  id: "610081",
+  shortName: "SHERIDAN",
+  staff: 52
+},
+{
+  id: "609865",
+  shortName: "JORDAN",
+  staff: 61
+},
+{
+  id: "609950",
+  shortName: "ORTIZ DE DOMINGUEZ",
+  staff: 64
+},
+{
+  id: "610111",
+  shortName: "PALMER",
+  staff: 74
+},
+{
+  id: "609833",
+  shortName: "CALDWELL",
+  staff: 29
+},
+{
+  id: "609835",
+  shortName: "CAMERON",
+  staff: 78
+},
+{
+  id: "609972",
+  shortName: "HAUGAN",
+  staff: 109
+},
+{
+  id: "609804",
+  shortName: "BOONE",
+  staff: 87
+},
+{
+  id: "609896",
+  shortName: "DRUMMOND",
+  staff: 41
+},
+{
+  id: "609988",
+  shortName: "HENRY",
+  staff: 59
+},
+{
+  id: "610145",
+  shortName: "REINBERG",
+  staff: 93
+},
+{
+  id: "610291",
+  shortName: "LEE",
+  staff: 72
+},
+{
+  id: "610054",
+  shortName: "MARSH",
+  staff: 83
+},
+{
+  id: "609837",
+  shortName: "CARNEGIE",
+  staff: 53
+},
+{
+  id: "609908",
+  shortName: "ESMOND",
+  staff: 31
+},
+{
+  id: "610124",
+  shortName: "WASHINGTON H ES",
+  staff: 40
+},
+{
+  id: "610029",
+  shortName: "LOZANO",
+  staff: 51
+},
+{
+  id: "610039",
+  shortName: "VON LINNE",
+  staff: 66
+},
+{
+  id: "609812",
+  shortName: "BROWN W",
+  staff: 46
+},
+{
+  id: "610063",
+  shortName: "MCCORMICK",
+  staff: 69
+},
+{
+  id: "609828",
+  shortName: "BURR",
+  staff: 44
+},
+{
+  id: "610089",
+  shortName: "MURPHY",
+  staff: 64
+},
+{
+  id: "609968",
+  shortName: "MCAULIFFE",
+  staff: 69
+},
+{
+  id: "610165",
+  shortName: "SCHUBERT",
+  staff: 69
+},
+{
+  id: "609773",
+  shortName: "TUBMAN",
+  staff: 55
+},
+{
+  id: "610281",
+  shortName: "POWELL",
+  staff: 58
+},
+{
+  id: "609967",
+  shortName: "FINKL",
+  staff: 49
+},
+{
+  id: "610405",
+  shortName: "SUDER",
+  staff: 64
+},
+{
+  id: "610147",
+  shortName: "ROGERS",
+  staff: 89
+},
+{
+  id: "609925",
+  shortName: "KELLMAN",
+  staff: 32
+},
+{
+  id: "610106",
+  shortName: "PICCOLO",
+  staff: 71
+},
+{
+  id: "610227",
+  shortName: "WHITNEY",
+  staff: 79
+},
+{
+  id: "609995",
+  shortName: "HITCH",
+  staff: 54
+},
+{
+  id: "610128",
+  shortName: "GARVEY",
+  staff: 30
+},
+{
+  id: "609818",
+  shortName: "BURBANK",
+  staff: 93
+},
+{
+  id: "610216",
+  shortName: "WALSH",
+  staff: 52
+},
+{
+  id: "610184",
+  shortName: "SPRY ES",
+  staff: 52
+},
+{
+  id: "610040",
+  shortName: "LLOYD",
+  staff: 90
+},
+{
+  id: "610534",
+  shortName: "SKINNER NORTH",
+  staff: 44
+},
+{
+  id: "610108",
+  shortName: "OTOOLE",
+  staff: 37
+},
+{
+  id: "610013",
+  shortName: "PILSEN",
+  staff: 44
+},
+{
+  id: "610146",
+  shortName: "REVERE",
+  staff: 23
+},
+{
+  id: "609836",
+  shortName: "CANTY",
+  staff: 86
+},
+{
+  id: "610229",
+  shortName: "PRITZKER",
+  staff: 60
+},
+{
+  id: "610191",
+  shortName: "STONE",
+  staff: 60
+},
+{
+  id: "610588",
+  shortName: "RICHARDSON",
+  staff: 96
+},
+{
+  id: "610041",
+  shortName: "LOCKE J",
+  staff: 118
+},
+{
+  id: "609904",
+  shortName: "ELLINGTON",
+  staff: 61
+},
+{
+  id: "609839",
+  shortName: "CARROLL",
+  staff: 50
+},
+{
+  id: "610036",
+  shortName: "LEWIS",
+  staff: 53
+},
+{
+  id: "610329",
+  shortName: "OROZCO",
+  staff: 52
+},
+{
+  id: "610053",
+  shortName: "MARQUETTE",
+  staff: 121
+},
+{
+  id: "610313",
+  shortName: "DE DIEGO",
+  staff: 77
+},
+{
+  id: "610048",
+  shortName: "MANIERRE",
+  staff: 45
+},
+{
+  id: "610123",
+  shortName: "PENN",
+  staff: 40
+},
+{
+  id: "609960",
+  shortName: "HALE",
+  staff: 85
+},
+{
+  id: "610524",
+  shortName: "ALCOTT HS",
+  staff: 49
+},
+{
+  id: "610305",
+  shortName: "LELAND",
+  staff: 54
+},
+{
+  id: "610366",
+  shortName: "WACKER",
+  staff: 35
+},
+{
+  id: "610051",
+  shortName: "NORTHWEST",
+  staff: 58
+},
+{
+  id: "610548",
+  shortName: "STEM",
+  staff: 43
+},
+{
+  id: "609875",
+  shortName: "DARWIN",
+  staff: 67
+},
+{
+  id: "610083",
+  shortName: "BEARD",
+  staff: 109
+},
+{
+  id: "609798",
+  shortName: "BELDING",
+  staff: 56
+},
+{
+  id: "610287",
+  shortName: "ASHBURN",
+  staff: 59
+},
+{
+  id: "610523",
+  shortName: "EDISON PARK",
+  staff: 70
+},
+{
+  id: "609966",
+  shortName: "HAMMOND",
+  staff: 45
+},
+{
+  id: "610062",
+  shortName: "MCCLELLAN",
+  staff: 61
+},
+{
+  id: "610090",
+  shortName: "MURRAY",
+  staff: 44
+},
+{
+  id: "610176",
+  shortName: "SHOOP",
+  staff: 57
+},
+{
+  id: "610073",
+  shortName: "MITCHELL",
+  staff: 49
+},
+{
+  id: "610159",
+  shortName: "SCAMMON",
+  staff: 64
+},
+{
+  id: "610368",
+  shortName: "HUGHES L",
+  staff: 69
+},
+{
+  id: "610101",
+  shortName: "OGDEN ES",
+  staff: 190
+},
+{
+  id: "610215",
+  shortName: "MADERO",
+  staff: 35
+},
+{
+  id: "609893",
+  shortName: "DORE",
+  staff: 88
+},
+{
+  id: "610242",
+  shortName: "BRENNEMANN",
+  staff: 67
+},
+{
+  id: "610068",
+  shortName: "HANSON PARK",
+  staff: 166
+},
+{
+  id: "609996",
+  shortName: "HOLDEN",
+  staff: 50
+},
+{
+  id: "609974",
+  shortName: "HAWTHORNE",
+  staff: 59
+},
+{
+  id: "610122",
+  shortName: "PEIRCE",
+  staff: 110
+},
+{
+  id: "609929",
+  shortName: "FULTON",
+  staff: 47
+},
+{
+  id: "609852",
+  shortName: "CHAPPELL",
+  staff: 71
+},
+{
+  id: "610006",
+  shortName: "HURLEY",
+  staff: 75
+},
+{
+  id: "609910",
+  shortName: "FALCONER",
+  staff: 104
+},
+{
+  id: "610060",
+  shortName: "Chicago World Language Academy",
+  staff: 47
+},
+{
+  id: "610084",
+  shortName: "KELLER",
+  staff: 22
+},
+{
+  id: "610016",
+  shortName: "KELLOGG",
+  staff: 39
+},
+{
+  id: "610066",
+  shortName: "MCDADE",
+  staff: 24
+},
+{
+  id: "610200",
+  shortName: "THORP J",
+  staff: 53
+},
+{
+  id: "609874",
+  shortName: "DIRKSEN",
+  staff: 91
+},
+{
+  id: "609887",
+  shortName: "DIXON",
+  staff: 45
+},
+{
+  id: "609898",
+  shortName: "EBERHART",
+  staff: 116
+},
+{
+  id: "610065",
+  shortName: "TILL",
+  staff: 42
+},
+{
+  id: "610279",
+  shortName: "TANNER",
+  staff: 43
+},
+{
+  id: "610521",
+  shortName: "DAVIS M",
+  staff: 29
+},
+{
+  id: "609983",
+  shortName: "HEDGES",
+  staff: 67
+},
+{
+  id: "610095",
+  shortName: "NEWBERRY",
+  staff: 56
+},
+{
+  id: "610022",
+  shortName: "KILMER",
+  staff: 100
+},
+{
+  id: "609849",
+  shortName: "CASSELL",
+  staff: 56
+},
+{
+  id: "610590",
+  shortName: "BRONZEVILLE CLASSICAL",
+  staff: 32
+},
+{
+  id: "609810",
+  shortName: "BRIDGE",
+  staff: 91
+},
+{
+  id: "610364",
+  shortName: "DUBOIS",
+  staff: 32
+},
+{
+  id: "610030",
+  shortName: "KOZMINSKI",
+  staff: 33
+},
+{
+  id: "610357",
+  shortName: "SPRY HS",
+  staff: 29
+},
+{
+  id: "609897",
+  shortName: "EARLE",
+  staff: 43
+},
+{
+  id: "609876",
+  shortName: "DAVIS N",
+  staff: 87
+},
+{
+  id: "610230",
+  shortName: "WILDWOOD",
+  staff: 53
+},
+{
+  id: "609959",
+  shortName: "HAINES",
+  staff: 55
+},
+{
+  id: "609815",
+  shortName: "BOUCHET",
+  staff: 73
+},
+{
+  id: "609845",
+  shortName: "CARVER G",
+  staff: 49
+},
+{
+  id: "609856",
+  shortName: "CLAY",
+  staff: 65
+},
+{
+  id: "609870",
+  shortName: "CORKERY",
+  staff: 64
+},
+{
+  id: "609919",
+  shortName: "FISKE",
+  staff: 57
+},
+{
+  id: "609930",
+  shortName: "FUNSTON",
+  staff: 68
+},
+{
+  id: "609975",
+  shortName: "HAY",
+  staff: 43
+},
+{
+  id: "610002",
+  shortName: "HOYNE",
+  staff: 26
+},
+{
+  id: "610046",
+  shortName: "LYON",
+  staff: 111
+},
+{
+  id: "610109",
+  shortName: "OWEN",
+  staff: 32
+},
+{
+  id: "610130",
+  shortName: "PIRIE",
+  staff: 33
+},
+{
+  id: "610139",
+  shortName: "PULLMAN",
+  staff: 46
+},
+{
+  id: "609941",
+  shortName: "RANDOLPH",
+  staff: 42
+},
+{
+  id: "610175",
+  shortName: "SHOESMITH",
+  staff: 36
+},
+{
+  id: "610589",
+  shortName: "SOR JUANA",
+  staff: 35
+},
+{
+  id: "610163",
+  shortName: "STOCK",
+  staff: 43
+},
+{
+  id: "610209",
+  shortName: "VOLTA",
+  staff: 78
+},
+{
+  id: "610110",
+  shortName: "WELLS ES",
+  staff: 44
+},
+{
+  id: "609981",
+  shortName: "HEARST",
+  staff: 54
+},
+{
+  id: "610136",
+  shortName: "PRESCOTT",
+  staff: 51
+},
+{
+  id: "609805",
+  shortName: "JOPLIN",
+  staff: 38
+},
+{
+  id: "610231",
+  shortName: "NATIONAL TEACHERS",
+  staff: 73
+},
+{
+  id: "610117",
+  shortName: "PASTEUR",
+  staff: 71
+},
+{
+  id: "610138",
+  shortName: "PULASKI",
+  staff: 83
+},
+{
+  id: "609978",
+  shortName: "SMITH",
+  staff: 48
+},
+{
+  id: "610197",
+  shortName: "TALCOTT",
+  staff: 63
+},
+{
+  id: "609766",
+  shortName: "VAUGHN HS",
+  staff: 96
+},
+{
+  id: "610094",
+  shortName: "NETTELHORST",
+  staff: 77
+},
+{
+  id: "610239",
+  shortName: "DALEY",
+  staff: 56
+},
+{
+  id: "609973",
+  shortName: "ZAPATA",
+  staff: 77
+},
+{
+  id: "609963",
+  shortName: "HAMILTON",
+  staff: 53
+},
+{
+  id: "609693",
+  shortName: "WESTINGHOUSE HS",
+  staff: 123
+},
+{
+  id: "610017",
+  shortName: "SAUCEDO",
+  staff: 107
+},
+{
+  id: "609734",
+  shortName: "TAFT HS",
+  staff: 349
+},
+{
+  id: "610144",
+  shortName: "REILLY",
+  staff: 82
+},
+{
+  id: "609782",
+  shortName: "AUDUBON",
+  staff: 52
+},
+{
+  id: "610177",
+  shortName: "SKINNER",
+  staff: 97
+},
+{
+  id: "610530",
+  shortName: "SOUTH SHORE ES",
+  staff: 56
+},
+{
+  id: "609796",
+  shortName: "BEAUBIEN",
+  staff: 89
+},
+{
+  id: "610513",
+  shortName: "AIR FORCE HS",
+  staff: 34
+},
+{
+  id: "609951",
+  shortName: "ARIEL",
+  staff: 58
+},
+{
+  id: "609777",
+  shortName: "ARMOUR",
+  staff: 46
+},
+{
+  id: "609790",
+  shortName: "BARTON",
+  staff: 53
+},
+{
+  id: "609803",
+  shortName: "BLAINE",
+  staff: 84
+},
+{
+  id: "609842",
+  shortName: "CARSON",
+  staff: 103
+},
+{
+  id: "610148",
+  shortName: "CHAVEZ",
+  staff: 97
+},
+{
+  id: "609867",
+  shortName: "COOPER",
+  staff: 64
+},
+{
+  id: "609709",
+  shortName: "GAGE PARK HS",
+  staff: 58
+},
+{
+  id: "610009",
+  shortName: "GALILEO",
+  staff: 60
+},
+{
+  id: "610541",
+  shortName: "LORCA",
+  staff: 75
+},
+{
+  id: "610077",
+  shortName: "MORRILL",
+  staff: 68
+},
+{
+  id: "610112",
+  shortName: "PARKER",
+  staff: 59
+},
+{
+  id: "610129",
+  shortName: "PICKARD",
+  staff: 52
+},
+{
+  id: "609691",
+  shortName: "NORTH-GRAND HS",
+  staff: 119
+},
+{
+  id: "610196",
+  shortName: "SWIFT",
+  staff: 79
+},
+{
+  id: "610011",
+  shortName: "JAMIESON",
+  staff: 89
+},
+{
+  id: "609792",
+  shortName: "BATEMAN",
+  staff: 94
+},
+{
+  id: "610544",
+  shortName: "AZUELA",
+  staff: 76
+},
+{
+  id: "610381",
+  shortName: "BRONZEVILLE HS",
+  staff: 25
+},
+{
+  id: "609820",
+  shortName: "BURLEY",
+  staff: 50
+},
+{
+  id: "609853",
+  shortName: "CHASE",
+  staff: 80
+},
+{
+  id: "609704",
+  shortName: "FARRAGUT HS",
+  staff: 94
+},
+{
+  id: "610032",
+  shortName: "GREEN",
+  staff: 47
+},
+{
+  id: "609807",
+  shortName: "HAMPTON",
+  staff: 58
+},
+{
+  id: "609725",
+  shortName: "MORGAN PARK HS",
+  staff: 117
+},
+{
+  id: "610390",
+  shortName: "RICKOVER MILITARY HS",
+  staff: 52
+},
+{
+  id: "610308",
+  shortName: "RUDOLPH",
+  staff: 46
+},
+{
+  id: "610504",
+  shortName: "THOMAS",
+  staff: 36
+},
+{
+  id: "610201",
+  shortName: "THORP O",
+  staff: 85
+},
+{
+  id: "609871",
+  shortName: "VICK",
+  staff: 53
+},
+{
+  id: "609993",
+  shortName: "LARA",
+  staff: 54
+},
+{
+  id: "609866",
+  shortName: "COONLEY",
+  staff: 85
+},
+{
+  id: "609695",
+  shortName: "AMUNDSEN HS",
+  staff: 153
+},
+{
+  id: "609737",
+  shortName: "VON STEUBEN HS",
+  staff: 148
+},
+{
+  id: "610363",
+  shortName: "DISNEY",
+  staff: 133
+},
+{
+  id: "609884",
+  shortName: "DEVER",
+  staff: 78
+},
+{
+  id: "609799",
+  shortName: "BELL",
+  staff: 96
+},
+{
+  id: "610220",
+  shortName: "WATERS",
+  staff: 57
+},
+{
+  id: "609741",
+  shortName: "HUBBARD HS",
+  staff: 163
+},
+{
+  id: "610212",
+  shortName: "ALBANY PARK",
+  staff: 31
+},
+{
+  id: "609774",
+  shortName: "ALCOTT ES",
+  staff: 82
+},
+{
+  id: "609786",
+  shortName: "AVALON PARK",
+  staff: 29
+},
+{
+  id: "609789",
+  shortName: "BARRY",
+  staff: 62
+},
+{
+  id: "609809",
+  shortName: "BRENTANO",
+  staff: 68
+},
+{
+  id: "609817",
+  shortName: "BUDLONG",
+  staff: 81
+},
+{
+  id: "609832",
+  shortName: "BYRNE",
+  staff: 69
+},
+{
+  id: "610248",
+  shortName: "CHICAGO ACADEMY ES",
+  staff: 65
+},
+{
+  id: "609855",
+  shortName: "CHRISTOPHER",
+  staff: 109
+},
+{
+  id: "610170",
+  shortName: "COLUMBIA EXPLORERS",
+  staff: 97
+},
+{
+  id: "610355",
+  shortName: "COURTENAY",
+  staff: 64
+},
+{
+  id: "609900",
+  shortName: "CURTIS",
+  staff: 53
+},
+{
+  id: "609885",
+  shortName: "DEWEY",
+  staff: 46
+},
+610515	26921.1	DISNEY II ES	#N/A	#N/A
+{
+  id: "610263",
+  shortName: "DULLES",
+  staff: 71
+},
+{
+  id: "609794",
+  shortName: "EDISON",
+  staff: 24
+},
+{
+  id: "609769",
+  shortName: "GRAHAM HS",
+  staff: 70
+},
+{
+  id: "609952",
+  shortName: "GREENE",
+  staff: 45
+},
+{
+  id: "609694",
+  shortName: "HANCOCK HS",
+  staff: 92
+},
+{
+  id: "610532",
+  shortName: "HERNANDEZ",
+  staff: 90
+},
+{
+  id: "610369",
+  shortName: "JACKSON M",
+  staff: 47
+},
+{
+  id: "610015",
+  shortName: "JUNGMAN",
+  staff: 56
+},
+{
+  id: "609715",
+  shortName: "KELLY HS",
+  staff: 192
+},
+{
+  id: "609751",
+  shortName: "KING HS",
+  staff: 75
+},
+{
+  id: "609720",
+  shortName: "LANE TECH HS",
+  staff: 339
+},
+{
+  id: "610038",
+  shortName: "LINCOLN",
+  staff: 67
+},
+{
+  id: "609780",
+  shortName: "MARINE LEADERSHIP AT AMES HS",
+  staff: 89
+},
+{
+  id: "610059",
+  shortName: "MAYER",
+  staff: 73
+},
+{
+  id: "610312",
+  shortName: "MCDOWELL",
+  staff: 20
+},
+{
+  id: "610070",
+  shortName: "MCPHERSON",
+  staff: 106
+},
+{
+  id: "609744",
+  shortName: "NORTHSIDE LEARNING HS",
+  staff: 123
+},
+{
+  id: "609680",
+  shortName: "PAYTON HS",
+  staff: 110
+},
+{
+  id: "610127",
+  shortName: "PETERSON",
+  staff: 86
+},
+{
+  id: "610153",
+  shortName: "RYDER",
+  staff: 78
+},
+{
+  id: "610586",
+  shortName: "SADLOWSKI",
+  staff: 78
+},
+{
+  id: "610172",
+  shortName: "SHERMAN",
+  staff: 40
+},
+{
+  id: "610203",
+  shortName: "TONTI",
+  staff: 94
+},
+{
+  id: "610207",
+  shortName: "VANDERPOEL",
+  staff: 32
+},
+{
+  id: "610219",
+  shortName: "WASHINGTON G ES",
+  staff: 65
+},
+{
+  id: "610315",
+  shortName: "WHITE",
+  staff: 20
+},
+{
+  id: "609755",
+  shortName: "YOUNG HS",
+  staff: 194
+},
+{
+  id: "609718",
+  shortName: "KENNEDY HS",
+  staff: 151
+},
+{
+  id: "609698",
+  shortName: "BOGAN HS",
+  staff: 99
+},
+{
+  id: "609756",
+  shortName: "CURIE HS",
+  staff: 297
+},
+{
+  id: "610268",
+  shortName: "ASHE",
+  staff: 41
+},
+{
+  id: "610563",
+  shortName: "BACK OF THE YARDS HS",
+  staff: 103
+},
+{
+  id: "609791",
+  shortName: "BASS",
+  staff: 52
+},
+{
+  id: "610246",
+  shortName: "BEASLEY",
+  staff: 119
+},
+{
+  id: "610087",
+  shortName: "BLAIR",
+  staff: 72
+},
+{
+  id: "610323",
+  shortName: "BOWEN HS",
+  staff: 56
+},
+{
+  id: "609806",
+  shortName: "BRADWELL",
+  staff: 53
+},
+{
+  id: "609726",
+  shortName: "BROOKS HS",
+  staff: 100
+},
+{
+  id: "609827",
+  shortName: "BURNSIDE",
+  staff: 50
+},
+{
+  id: "609829",
+  shortName: "BURROUGHS",
+  staff: 46
+},
+{
+  id: "610353",
+  shortName: "CALMECA",
+  staff: 79
+},
+{
+  id: "610340",
+  shortName: "CHICAGO ACADEMY HS",
+  staff: 57
+},
+{
+  id: "609753",
+  shortName: "CHICAGO AGRICULTURE HS",
+  staff: 118
+},
+{
+  id: "609674",
+  shortName: "CHICAGO VOCATIONAL HS",
+  staff: 110
+},
+{
+  id: "609795",
+  shortName: "CLARK ES",
+  staff: 29
+},
+{
+  id: "610199",
+  shortName: "COLEMON",
+  staff: 29
+},
+{
+  id: "609863",
+  shortName: "COLUMBUS",
+  staff: 26
+},
+{
+  id: "610003",
+  shortName: "CUFFE",
+  staff: 38
+},
+{
+  id: "609880",
+  shortName: "DECATUR",
+  staff: 30
+},
+{
+  id: "610252",
+  shortName: "DETT",
+  staff: 62
+},
+{
+  id: "610564",
+  shortName: "DISNEY II HS",
+  staff: 122
+},
+{
+  id: "610254",
+  shortName: "DVORAK",
+  staff: 46
+},
+{
+  id: "609901",
+  shortName: "EDGEBROOK",
+  staff: 48
+},
+{
+  id: "609903",
+  shortName: "EDWARDS",
+  staff: 160
+},
+{
+  id: "609909",
+  shortName: "EVERETT",
+  staff: 26
+},
+{
+  id: "610319",
+  shortName: "EVERGREEN",
+  staff: 33
+},
+{
+  id: "609708",
+  shortName: "FOREMAN HS",
+  staff: 83
+},
+{
+  id: "609924",
+  shortName: "FORT DEARBORN",
+  staff: 51
+},
+{
+  id: "610503",
+  shortName: "FRAZIER PROSPECTIVE",
+  staff: 30
+},
+{
+  id: "609850",
+  shortName: "GREELEY",
+  staff: 55
+},
+{
+  id: "609808",
+  shortName: "HALEY",
+  staff: 57
+},
+{
+  id: "609971",
+  shortName: "HARVARD",
+  staff: 57
+},
+{
+  id: "609976",
+  shortName: "HAYT",
+  staff: 91
+},
+{
+  id: "609985",
+  shortName: "HEFFERAN",
+  staff: 41
+},
+{
+  id: "609986",
+  shortName: "HENDERSON",
+  staff: 30
+},
+{
+  id: "609987",
+  shortName: "HENDRICKS",
+  staff: 48
+},
+{
+  id: "609713",
+  shortName: "HYDE PARK HS",
+  staff: 92
+},
+{
+  id: "610384",
+  shortName: "INFINITY HS",
+  staff: 42
+},
+{
+  id: "609678",
+  shortName: "JONES HS",
+  staff: 166
+},
+{
+  id: "609764",
+  shortName: "JUAREZ HS",
+  staff: 166
+},
+{
+  id: "610019",
+  shortName: "KERSHAW",
+  staff: 42
+},
+{
+  id: "610299",
+  shortName: "KING ES",
+  staff: 38
+},
+{
+  id: "610026",
+  shortName: "KINZIE",
+  staff: 88
+},
+{
+  id: "609719",
+  shortName: "LAKE VIEW HS",
+  staff: 159
+},
+{
+  id: "610033",
+  shortName: "LASALLE",
+  staff: 57
+},
+{
+  id: "609738",
+  shortName: "LINCOLN PARK HS",
+  staff: 195
+},
+{
+  id: "610391",
+  shortName: "LINDBLOM HS",
+  staff: 147
+},
+{
+  id: "610043",
+  shortName: "LOVETT",
+  staff: 37
+},
+{
+  id: "609724",
+  shortName: "MATHER HS",
+  staff: 158
+},
+{
+  id: "610067",
+  shortName: "MCKAY",
+  staff: 78
+},
+{
+  id: "610074",
+  shortName: "MONROE",
+  staff: 78
+},
+{
+  id: "610257",
+  shortName: "MORTON",
+  staff: 39
+},
+{
+  id: "609749",
+  shortName: "NORTHSIDE PREP HS",
+  staff: 97
+},
+610529	24732	OGDEN HS	#N/A	#N/A
+{
+  id: "610104",
+  shortName: "ONAHAN",
+  staff: 64
+},
+{
+  id: "610120",
+  shortName: "PECK",
+  staff: 100
+},
+{
+  id: "610126",
+  shortName: "PERSHING",
+  staff: 56
+},
+{
+  id: "610304",
+  shortName: "PHOENIX MILITARY HS",
+  staff: 63
+},
+{
+  id: "609679",
+  shortName: "PROSSER HS",
+  staff: 133
+},
+{
+  id: "610334",
+  shortName: "RABY HS",
+  staff: 50
+},
+{
+  id: "610141",
+  shortName: "RAVENSWOOD",
+  staff: 57
+},
+{
+  id: "610142",
+  shortName: "RAY",
+  staff: 70
+},
+{
+  id: "609728",
+  shortName: "ROOSEVELT HS",
+  staff: 115
+},
+{
+  id: "610155",
+  shortName: "SAUGANASH",
+  staff: 51
+},
+{
+  id: "610157",
+  shortName: "SAWYER",
+  staff: 109
+},
+{
+  id: "609729",
+  shortName: "SCHURZ HS",
+  staff: 169
+},
+{
+  id: "609730",
+  shortName: "SENN HS",
+  staff: 148
+},
+{
+  id: "610383",
+  shortName: "SOCIAL JUSTICE HS",
+  staff: 48
+},
+{
+  id: "610543",
+  shortName: "SOLORIO HS",
+  staff: 133
+},
+{
+  id: "609990",
+  shortName: "SOUTH LOOP",
+  staff: 81
+},
+{
+  id: "609745",
+  shortName: "SOUTHSIDE HS",
+  staff: 115
+},
+{
+  id: "609732",
+  shortName: "STEINMETZ HS",
+  staff: 123
+},
+{
+  id: "609733",
+  shortName: "SULLIVAN HS",
+  staff: 87
+},
+{
+  id: "610194",
+  shortName: "SUMNER",
+  staff: 36
+},
+{
+  id: "609735",
+  shortName: "TILDEN HS",
+  staff: 46
+},
+{
+  id: "609739",
+  shortName: "WASHINGTON HS",
+  staff: 155
+},
+{
+  id: "610225",
+  shortName: "WHISTLER",
+  staff: 39
+},
+#N/A	#N/A	VIRTUAL ACADEMY ES	#N/A	#N/A
+{
+  id: "610198",
+  shortName: "TAYLOR",
+  staff: 47
+},
+{
+  id: "609848",
+  shortName: "ALDRIDGE",
+  staff: 35
+},
+{
+  id: "610518",
+  shortName: "AUSTIN CCA HS",
+  staff: 35
+},
+{
+  id: "610237",
+  shortName: "BEETHOVEN",
+  staff: 32
+},
+{
+  id: "609797",
+  shortName: "BEIDLER",
+  staff: 42
+},
+{
+  id: "609800",
+  shortName: "BENNETT",
+  staff: 35
+},
+{
+  id: "610238",
+  shortName: "BOND",
+  staff: 45
+},
+{
+  id: "609811",
+  shortName: "BRIGHT",
+  staff: 44
+},
+{
+  id: "609813",
+  shortName: "BROWNELL",
+  staff: 24
+},
+{
+  id: "609844",
+  shortName: "CARTER",
+  staff: 30
+},
+{
+  id: "609760",
+  shortName: "CARVER MILITARY HS",
+  staff: 57
+},
+{
+  id: "610251",
+  shortName: "CATHER",
+  staff: 58
+},
+{
+  id: "609851",
+  shortName: "CHALMERS",
+  staff: 42
+},
+{
+  id: "609754",
+  shortName: "CHICAGO MILITARY HS",
+  staff: 47
+},
+{
+  id: "610244",
+  shortName: "CLARK HS",
+  staff: 79
+},
+{
+  id: "609759",
+  shortName: "CLEMENTE HS",
+  staff: 105
+},
+{
+  id: "609862",
+  shortName: "COLES",
+  staff: 47
+},
+{
+  id: "610499",
+  shortName: "COLLINS HS",
+  staff: 46
+},
+{
+  id: "609864",
+  shortName: "COOK",
+  staff: 41
+},
+{
+  id: "609761",
+  shortName: "CORLISS HS",
+  staff: 57
+},
+{
+  id: "610561",
+  shortName: "CRANE MEDICAL HS",
+  staff: 58
+},
+{
+  id: "609873",
+  shortName: "CROWN",
+  staff: 24
+},
+{
+  id: "610367",
+  shortName: "DEPRIEST",
+  staff: 74
+},
+{
+  id: "610402",
+  shortName: "DEVRY HS",
+  staff: 13
+},
+{
+  id: "609891",
+  shortName: "DOOLITTLE",
+  staff: 32
+},
+{
+  id: "610245",
+  shortName: "DOUGLASS HS",
+  staff: 18
+},
+{
+  id: "609676",
+  shortName: "DUNBAR HS",
+  staff: 54
+},
+{
+  id: "610188",
+  shortName: "DUNNE",
+  staff: 31
+},
+{
+  id: "610587",
+  shortName: "DYETT ARTS HS",
+  staff: 67
+},
+{
+  id: "610316",
+  shortName: "EARHART",
+  staff: 24
+},
+{
+  id: "610592",
+  shortName: "ENGLEWOOD STEM HS",
+  staff: 97
+},
+{
+  id: "609907",
+  shortName: "ERICSON",
+  staff: 51
+},
+{
+  id: "610055",
+  shortName: "FARADAY",
+  staff: 33
+},
+{
+  id: "609705",
+  shortName: "FENGER HS",
+  staff: 40
+},
+{
+  id: "609917",
+  shortName: "FERNWOOD",
+  staff: 21
+},
+{
+  id: "609927",
+  shortName: "FOSTER PARK",
+  staff: 46
+},
+{
+  id: "610558",
+  shortName: "GOODE HS",
+  staff: 100
+},
+{
+  id: "609954",
+  shortName: "GREGORY",
+  staff: 48
+},
+{
+  id: "609955",
+  shortName: "GRESHAM",
+  staff: 50
+},
+{
+  id: "609710",
+  shortName: "HARLAN HS",
+  staff: 48
+},
+{
+  id: "609969",
+  shortName: "HARTE",
+  staff: 36
+},
+{
+  id: "610295",
+  shortName: "HIGGINS",
+  staff: 32
+},
+{
+  id: "609712",
+  shortName: "HIRSCH HS",
+  staff: 30
+},
+{
+  id: "609997",
+  shortName: "HOLMES",
+  staff: 23
+},
+{
+  id: "610000",
+  shortName: "HOWE",
+  staff: 45
+},
+{
+  id: "610005",
+  shortName: "HUGHES C",
+  staff: 30
+},
+{
+  id: "610121",
+  shortName: "IRVING",
+  staff: 48
+},
+{
+  id: "609783",
+  shortName: "JEFFERSON HS",
+  staff: 55
+},
+{
+  id: "610274",
+  shortName: "JOHNSON",
+  staff: 44
+},
+{
+  id: "609762",
+  shortName: "JULIAN HS",
+  staff: 72
+},
+{
+  id: "609716",
+  shortName: "KELVYN PARK HS",
+  staff: 68
+},
+{
+  id: "609746",
+  shortName: "KENWOOD HS",
+  staff: 176
+},
+{
+  id: "609869",
+  shortName: "LANGFORD",
+  staff: 29
+},
+{
+  id: "610208",
+  shortName: "LAVIZZO",
+  staff: 44
+},
+{
+  id: "610034",
+  shortName: "LAWNDALE",
+  staff: 35
+},
+{
+  id: "610044",
+  shortName: "LOWELL",
+  staff: 56
+},
+{
+  id: "609722",
+  shortName: "MANLEY HS",
+  staff: 31
+},
+{
+  id: "610052",
+  shortName: "MANN",
+  staff: 38
+},
+{
+  id: "609723",
+  shortName: "MARSHALL HS",
+  staff: 37
+},
+{
+  id: "610056",
+  shortName: "MASON",
+  staff: 39
+},
+{
+  id: "610290",
+  shortName: "MAYS",
+  staff: 47
+},
+{
+  id: "610282",
+  shortName: "MCNAIR",
+  staff: 68
+},
+{
+  id: "610293",
+  shortName: "MELODY",
+  staff: 50
+},
+{
+  id: "610082",
+  shortName: "MOUNT GREENWOOD",
+  staff: 93
+},
+{
+  id: "610385",
+  shortName: "MULTICULTURAL ARTS HIGH SCHOOL",
+  staff: 28
+},
+{
+  id: "610092",
+  shortName: "NASH",
+  staff: 37
+},
+{
+  id: "610093",
+  shortName: "NEIL",
+  staff: 74
+},
+{
+  id: "609793",
+  shortName: "NICHOLSON",
+  staff: 57
+},
+{
+  id: "610102",
+  shortName: "OGLESBY",
+  staff: 44
+},
+{
+  id: "610103",
+  shortName: "OKEEFFE",
+  staff: 73
+},
+{
+  id: "610389",
+  shortName: "ORR HS",
+  staff: 39
+},
+{
+  id: "609943",
+  shortName: "OWENS",
+  staff: 57
+},
+{
+  id: "610116",
+  shortName: "PARKSIDE",
+  staff: 33
+},
+{
+  id: "610386",
+  shortName: "PEACE AND EDUCATION HS",
+  staff: 37
+},
+{
+  id: "609727",
+  shortName: "PHILLIPS HS",
+  staff: 71
+},
+{
+  id: "610131",
+  shortName: "PLAMONDON",
+  staff: 25
+},
+{
+  id: "610143",
+  shortName: "REAVIS",
+  staff: 37
+},
+{
+  id: "609682",
+  shortName: "RICHARDS HS",
+  staff: 43
+},
+{
+  id: "610152",
+  shortName: "RUGGLES",
+  staff: 42
+},
+{
+  id: "610250",
+  shortName: "SALAZAR",
+  staff: 38
+},
+{
+  id: "610178",
+  shortName: "SCHMID",
+  staff: 28
+},
+{
+  id: "610173",
+  shortName: "SHERWOOD",
+  staff: 40
+},
+{
+  id: "609692",
+  shortName: "SIMEON HS",
+  staff: 138
+},
+{
+  id: "609750",
+  shortName: "SIMPSON HS",
+  staff: 17
+},
+{
+  id: "610547",
+  shortName: "SOUTH SHORE INTL HS",
+  staff: 62
+},
+{
+  id: "610183",
+  shortName: "SPENCER",
+  staff: 56
+},
+{
+  id: "610339",
+  shortName: "STAGG",
+  staff: 53
+},
+{
+  id: "610195",
+  shortName: "SUTHERLAND",
+  staff: 71
+},
+{
+  id: "610202",
+  shortName: "TILTON",
+  staff: 38
+},
+{
+  id: "610394",
+  shortName: "UPLIFT HS",
+  staff: 54
+},
+{
+  id: "610213",
+  shortName: "WADSWORTH",
+  staff: 60
+},
+{
+  id: "610133",
+  shortName: "WARD L",
+  staff: 55
+},
+{
+  id: "610218",
+  shortName: "WARREN",
+  staff: 27
+},
+{
+  id: "609740",
+  shortName: "WELLS HS",
+  staff: 56
+},
+{
+  id: "610223",
+  shortName: "WENTWORTH",
+  staff: 64
+},
+{
+  id: "610300",
+  shortName: "WESTCOTT",
+  staff: 54
+},
+{
+  id: "610380",
+  shortName: "WILLIAMS HS",
+  staff: 26
+},
+{
+  id: "610345",
+  shortName: "WOODSON",
+  staff: 44
+},
+{
+  id: "610392",
+  shortName: "WORLD LANGUAGE HS",
+  staff: 45
+},
+{
+  id: "609748",
+  shortName: "YORK HS",
+  staff: 53
+},
+{
+  id: "610235",
+  shortName: "YOUNG ES",
+  staff: 62
+}

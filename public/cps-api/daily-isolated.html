@@ -24,10 +24,16 @@
     </nav>
   </header>
   <main>
-    <h1>Daily Quarantines by School</h1>
+    <h1>Daily Quarantines by School*</h1>
     <p>
     This page queries the CPS API for the history of quarantine/isolation data from two endpoints: <a href="https://api.cps.edu/schoolprofile/cps/SchoolProfileBasicData?SchoolYear=2022">School Basic Profile</a> (for student count) and <a href="https://api.cps.edu/health/cps/SchoolNoAdmittanceSummary">School No Admittance Summary</a> (for all quarantine numbers). You can query for any day in which any school has recorded cases this school year, according to CPS data. The default value is the most recent day (generally, yesterday). Use the dropdown to change the date selected. Results are ordered by highest percentage of students in quarantine/isolation. To copy this data into another spreadsheet for analysis, click the button that says “copy to clipboard.”
     </p>
+    <details style="margin: 1.1em 0 1.6em;">
+      <summary style="font-weight: bold;">*Notes on data sources <span style="font-weight:normal;">(click to show)</span></summary>
+    <p>To the best of our knowledge, CPS does not currently report the number of adults working in a school on any public data source. In addition, we are not certain that the student population numbers they report in their school profile API are updated regularly. Finally, the school-by-school quarantine data that CPS publishes through their API does not currently distinguish between adults quarantined and students quarantined. For all these reasons, the percentage reported here may differ both from the percentage reported by CPS and from the actual percentage of students and staff in quarantine at any given school.</p>
+    <p>In addition, it could be argued that the combined adults+staff in quarantine should be divided by our (not current) figure for adult population plus students, unlike the current number that divides only by student population. True, the current method may skew a bit high. However, district-wide adult percentages during every day outside winter break and the period of CTU’s job action in January were lower than student percentages (by an average of 1.3%, so far). So, combining the adult and student populations would also likely skew the resulting percentage &mdash; in this instance lower, rather than higher.
+    </p>
+    </details>
     <h2>Query activity log</h2>
     <div style="background: #ddd; padding: 10px;">
     <output id="queryOutput"></output>

@@ -34,18 +34,21 @@ function autorun() {
     const responseTime = new Date() - sentQuery;
     progress.innerText += `
       Query response returned in ${responseTime/1000} seconds. 
-      Processing data for display.
-`;
+      Processing data for display...
+      `;
+    counting = setInterval (function() { progress.innerText += "." }, 1000);
     // 
     // Convert data and render to table
     bySchool = GroupDataBySchool(data,datePicker,populations);
     let selectedDate = datePicker.options[datePicker.selectedIndex];
     let selectedDateValue = selectedDate.value;
     let selectedDateText = selectedDate.text;
-    dataDisplay.innerHTML = `<h3>Case Counts for the week ending ${selectedDateText}</h3>`;
+    dataDisplay.innerHTML = `<h3>People in quarantine on ${selectedDateText}.</h3>`;
     let ordered = orderRows(selectedDateValue,bySchool)
     dataTable = renderTable(ordered);
     dataDisplay.appendChild(dataTable);
+    clearInterval(counting);
+    progress.innerText += "Data processed.";
 
     //
     // Activate copy to clipboard
@@ -58,7 +61,7 @@ function autorun() {
     const selectedDateText =  selectedDate.text;
     let ordered = orderRows(selectedDateValue,bySchool);
     dataTable = renderTable(ordered);
-    dataDisplay.innerHTML = `<h3>Case Counts for the week ending ${selectedDateText}</h3>`;
+    dataDisplay.innerHTML = `<h3>People in quarantine on ${selectedDateText}.</h3>`;
     dataDisplay.appendChild(dataTable);
   });
   return false;
@@ -141,9 +144,9 @@ function renderTable(rows) {
     <thead>
       <tr>
         <th scope="col">Name</th>
-        <th scope="col">Quarantined</th>
-        <th scope="col">Population</th>
-        <th scope="col">Percent Quarantined</th>
+        <th scope="col">People Quarantined</th>
+        <th scope="col">Student Population</th>
+        <th scope="col">*Percent Quarantined</th>
       </tr>
     </thead>
   `
@@ -152,25 +155,20 @@ function renderTable(rows) {
 
   for (row of rows) {
     let tr = document.createElement("tr"); 
-    const percent = row.percent.toFixed(1);
     tr.innerHTML  = `<td>${row.name}</td>`;
-    tr.innerHTML += `<td>${commify( row.persons )}</td>`
-    tr.innerHTML += `<td>${commify( row.population )}</td>`
-    tr.innerHTML += `<td>${percent}%</td>`
+    tr.innerHTML += `<td>${Number(row.persons).toLocaleString()}</td>`
+    tr.innerHTML += `<td>${Number(row.population).toLocaleString()}</td>`
+    tr.innerHTML += `<td>${row.percent.toFixed(1)}%</td>`
     tbody.appendChild(tr);
   }
   table.appendChild(tbody);
+  buttons.scrollTo();
   return table;
 }
 
 //
 // Number formatting functions
 //
-function commify (numberString) {
-  const number = parseInt(numberString);
-  return number.toLocaleString();
-}
-
 function convertDate (datestring) {
   const date = new Date(datestring);
   const dd = String(date.getDate()).padStart(2, '0');
