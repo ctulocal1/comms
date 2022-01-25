@@ -162,7 +162,8 @@ function renderTable(rows) {
     tbody.appendChild(tr);
   }
   table.appendChild(tbody);
-  buttons.scrollTo();
+  const buttons = document.getElementById("buttons");
+  buttons.scrollIntoView();
   return table;
 }
 
