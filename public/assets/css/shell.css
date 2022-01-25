@@ -141,3 +141,10 @@ footer p {
   padding: 0;
   font-size: var(--smaller);
 }
+
+
+@media screen and (max-width: 480px) {
+  main {
+    padding: 40px 15px;
+  }
+}

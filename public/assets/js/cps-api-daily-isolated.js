@@ -144,9 +144,9 @@ function renderTable(rows) {
     <thead>
       <tr>
         <th scope="col">Name</th>
-        <th scope="col">People Quarantined</th>
-        <th scope="col">Student Population</th>
-        <th scope="col">*Percent Quarantined</th>
+        <th scope="col">People <br>Quar&shy;ant&shy;ined</th>
+        <th scope="col">Student <br>Pop&shy;ula&shy;tion</th>
+        <th scope="col">*Per&shy;cent <br>Quar&shy;ant&shy;ined</th>
       </tr>
     </thead>
   `

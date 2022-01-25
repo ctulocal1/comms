@@ -34,3 +34,14 @@ p#buttons button {
 .btn {
   visibility: hidden;
 }
+
+@media screen and (max-width: 480px) {
+  table {
+    margin:20px 0;
+    max-width: 100%;
+    width: calc(100vw - 6px);
+  }
+  tbody td, thead th {
+    font-size: 80%;
+  }
+}
