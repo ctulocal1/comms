@@ -2,7 +2,7 @@ table {
   margin: 20px auto;
   border-collapse: collapse;
 }
-thead tr {
+thead tr  {
   background: #222;
   color: #eee;
 }
