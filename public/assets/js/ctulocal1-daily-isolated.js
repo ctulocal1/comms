@@ -60,7 +60,7 @@ function autorun() {
     const selectedDateText =  selectedDate.text;
     let ordered = orderRows(selectedDateValue,bySchool);
     dataTable = renderTable(ordered);
-    dataDisplay.innerHTML = `<h3>People in quarantine on ${selectedDateText}.</h3>`;
+    dataDisplay.innerHTML = `<h2>People in quarantine on ${selectedDateText}.</h2>`;
     dataDisplay.appendChild(dataTable);
   });
   return false;
@@ -162,7 +162,7 @@ function renderTable(rows) {
   }
   table.appendChild(tbody);
   const buttons = document.getElementById("buttons");
-  buttons.scrollIntoView();
+  buttons.scrollIntoView({behavior:"smooth",block:"start",inline:"start"});
   return table;
 }
 
