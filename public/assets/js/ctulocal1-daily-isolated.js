@@ -162,7 +162,7 @@ function renderTable(rows) {
   }
   table.appendChild(tbody);
   const buttons = document.getElementById("buttons");
-  buttons.scrollIntoView({behavior:"smooth",block:"start",inline:"start"});
+  // buttons.scrollIntoView({behavior:"smooth",block:"start",inline:"start"});
   return table;
 }
 
