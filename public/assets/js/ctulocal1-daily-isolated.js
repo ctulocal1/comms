@@ -62,7 +62,7 @@ function autorun() {
     dataTable = renderTable(ordered);
     dataDisplay.innerHTML = `<h2>People in quarantine on ${selectedDateText}.</h2>`;
     dataDisplay.appendChild(dataTable);
-    dataDisplay.innerHTML += "<p><a href="#buttons">Scroll up to the top of the table.</a></p>";
+    dataDisplay.innerHTML += '<p><a href="#buttons">Scroll up to the top of the table.</a></p>';
   });
   return false;
 }
