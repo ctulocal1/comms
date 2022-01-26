@@ -62,6 +62,7 @@ function autorun() {
     dataTable = renderTable(ordered);
     dataDisplay.innerHTML = `<h2>People in quarantine on ${selectedDateText}.</h2>`;
     dataDisplay.appendChild(dataTable);
+    dataDisplay.innerHTML += "<p><a href="#buttons">Scroll up to the top of the table.</a></p>";
   });
   return false;
 }
@@ -83,7 +84,6 @@ function orderRows (selected,schools) {
       if (row.population > 0) { rows.push(row) }
     }
   }
-  console.log(rows);
   rows.sort( (a,b) => b.percent - a.percent);
   return rows;
 }
@@ -130,7 +130,6 @@ function GroupDataBySchool (data,datePicker,populations) {
       const dateString =  new Intl.DateTimeFormat('en-US', {month:"short",day:"2-digit"}).format(dateval).toUpperCase();
       datePicker.innerHTML += `<option value="${date}">${dateString}</option>`;
     }
-  console.log(schoolsData);
   return schoolsData;
 }
 
