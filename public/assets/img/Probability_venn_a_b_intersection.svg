@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="250"
+   height="155"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.44.1"
+   sodipodi:docname="probability_venn_a_b_intersection.svg"
+   sodipodi:docbase="C:\Documents and Settings\Administrator\Desktop">
+  <metadata
+     id="metadata26">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="573"
+     inkscape:window-width="853"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="2"
+     inkscape:cx="160.9871"
+     inkscape:cy="71.025481"
+     inkscape:window-x="66"
+     inkscape:window-y="87"
+     inkscape:current-layer="svg2"
+     width="250px"
+     height="155px" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4553">
+      <stop
+         style="stop-color:#00ffdc;stop-opacity:0.79215693"
+         offset="0"
+         id="stop4555" />
+      <stop
+         style="stop-color:#13c1ec;stop-opacity:0.79215693"
+         offset="1"
+         id="stop4557" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2762">
+      <stop
+         style="stop-color:#ff8100;stop-opacity:0.7904762"
+         offset="0"
+         id="stop2764" />
+      <stop
+         style="stop-color:#ecd913;stop-opacity:0.7904762"
+         offset="1"
+         id="stop2766" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2762"
+       id="linearGradient1909"
+       gradientUnits="userSpaceOnUse"
+       x1="84.285713"
+       y1="108.07647"
+       x2="51.428574"
+       y2="55.933605"
+       gradientTransform="matrix(0.767799,0,0,0.767799,4.83328,9.61646)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4553"
+       id="linearGradient1962"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.767799,0,0,0.767799,60.33328,9.61646)"
+       x1="84.285713"
+       y1="108.07647"
+       x2="51.428574"
+       y2="55.933605" />
+  </defs>
+  <path
+     d="M 190.85915,83 C 190.86283,114.95733 164.95733,140.86582 133,140.86582 C 101.04267,140.86582 75.13717,114.95733 75.14085,83 C 75.13717,51.042668 101.04267,25.134179 133,25.134179 C 164.95733,25.134179 190.86283,51.042668 190.85915,83 L 190.85915,83 z "
+     style="fill:url(#linearGradient1962);fill-opacity:1.0;stroke:#343434;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;opacity:0.8"
+     id="path1956" />
+  <text
+     x="207.61032"
+     y="41.723709"
+     style="font-size:50.00136566px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     id="text1905"
+     xml:space="preserve"><tspan
+       x="207.61032"
+       y="41.723709"
+       style="font-weight:bold"
+       id="tspan1907">Ω</tspan></text>
+  <rect
+     id="rect2034"
+     width="244.00987"
+     height="149.00987"
+     x="2.9950676"
+     y="2.99506"
+     style="fill:none;stroke:black;stroke-width:0.99013519;stroke-opacity:1" />
+  <path
+     d="M 135.35915,83 C 135.36283,114.95733 109.45733,140.86582 77.5,140.86582 C 45.542669,140.86582 19.637164,114.95733 19.640846,83 C 19.637164,51.042668 45.542669,25.134179 77.5,25.134179 C 109.45733,25.134179 135.36283,51.042668 135.35915,83 L 135.35915,83 z "
+     style="fill:url(#linearGradient1909);fill-opacity:1;stroke:#343434;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;opacity:0.8"
+     id="path2760" />
+  <text
+     x="29.629692"
+     y="99.54911"
+     style="font-size:51.65438843px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     id="text4559"
+     xml:space="preserve"><tspan
+       x="29.629692"
+       y="99.54911"
+       style="font-weight:bold"
+       id="tspan4561">A</tspan></text>
+  <text
+     x="142.51167"
+     y="99.828125"
+     style="font-size:51.65438843px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     id="text1964"
+     xml:space="preserve"><tspan
+       x="142.51167"
+       y="99.828125"
+       style="font-weight:bold"
+       id="tspan1966">B</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:David"
+     x="80.5"
+     y="87.5"
+     id="text5509"><tspan
+       sodipodi:role="line"
+       id="tspan5511"
+       x="80.5"
+       y="87.5"
+       style="font-size:24px;font-family:Arial">A∩B</tspan></text>
+</svg>

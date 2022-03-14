@@ -117,11 +117,7 @@
                                     } else {
                                             // Now spit out the matched response to the page
                                             if ( matches.length > 1 ) {
-                                                    const matchup = multiples.some(
-                                                            skool => skool.dept === school.dept
-                                                          )
-                                                    if (!matchup)
-                                                    { multiples.push( school ) }
+                                                    multiples.push( school )
                                                   }
                                             for (let match of matches) {
                                                     match = match.item
