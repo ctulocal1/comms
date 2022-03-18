@@ -25,12 +25,12 @@
                 console.log(error)
               });
           if (records) {
-              const firstname = records[0].firstname,
-                lastname = records[0].lastname,
+              const FirstName = records[0].FirstName,
+                LastName = records[0].LastName,
                 type = records[0].class;
               const s = records.length > 1 ? "s" : ""
               let header = `
- <h3>${records.length} record${s} found for <br>${firstname} ${lastname}, ${type}</h3>
+ <h3>${records.length} record${s} found for <br>${FirstName} ${LastName}, ${type}</h3>
  <table id="records" border="none" cellspacing="1" cellpadding="1">
  <thead>
  <tr><th scope="col">Position</th><th scope="col">Amount</th></tr>
@@ -41,7 +41,7 @@
               let recordText = "";
               for (record of records) {
                   let row = `
- <tr><td>${record.type}</td><td>${dollarize(record.amount)}</td></tr>
+ <tr><td>${record.HIPPA}</td><td>${record.All}</td></tr>
  `;
                   rows += row;
                 }
