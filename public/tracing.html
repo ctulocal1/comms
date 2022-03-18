@@ -16,7 +16,7 @@
           event.preventDefault();
           output.innerHTML += "<p>Searching database...</p>";
           let email = cpsemail.value;
-          let fetchURL = `https://localhost:8888/api/TrainingPay?email=${email}`;
+          let fetchURL = `https://sad-archimedes-551ea7.netlify.app/.netlify/functions/TrainingPay?email=${email}`;
           const isOk = response => response.ok ? response.json() : Promise.reject(new Error('Failed to load data from server'))
           let errorMsg;
           let records = await fetch(fetchURL)
