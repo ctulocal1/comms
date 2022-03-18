@@ -1,0 +1,97 @@
+<h2>Look up training information</h2>
+<form id="record-form">
+  <label for="cpsemail">CPS Email Address: <input type="text" id="cpsemail"></label>
+  <button id="lookup" type="submit">Lookup</button>  
+</form>
+
+<output id="record" for="cpsemail"><h3>Training Information</h3></output>
+
+<script type="text/javascript">
+  function autorun() {
+      const lookup = document.getElementById("record-form"); 
+      const btn = document.getElementById("lookup")
+      const cpsemail = document.getElementById("cpsemail");
+      const output = document.getElementById("record");
+      lookup.addEventListener("submit", async () => {
+          event.preventDefault();
+          output.innerHTML += "<p>Searching database...</p>";
+          let email = cpsemail.value;
+          let fetchURL = `https://localhost:8888/api/TrainingPay?email=${email}`;
+          const isOk = response => response.ok ? response.json() : Promise.reject(new Error('Failed to load data from server'))
+          let errorMsg;
+          let records = await fetch(fetchURL)
+            .then(isOk)
+            .catch(error => {
+                console.log(error)
+              });
+          if (records) {
+              const firstname = records[0].firstname,
+                lastname = records[0].lastname,
+                type = records[0].class;
+              const s = records.length > 1 ? "s" : ""
+              let header = `
+ <h3>${records.length} record${s} found for <br>${firstname} ${lastname}, ${type}</h3>
+ <table id="records" border="none" cellspacing="1" cellpadding="1">
+ <thead>
+ <tr><th scope="col">Position</th><th scope="col">Amount</th></tr>
+ </thead>
+ <tbody>
+ `;
+              let rows = "";
+              let recordText = "";
+              for (record of records) {
+                  let row = `
+ <tr><td>${record.type}</td><td>${dollarize(record.amount)}</td></tr>
+ `;
+                  rows += row;
+                }
+              let footer = `
+ </tbody>
+ </table>
+ `;
+              output.innerHTML = header + rows + footer;
+
+            } else {
+                output.innerHTML = `<p>Your CPS email address was not found or there was a server error.</p>
+ <p>If you think this was a mistake, please complete our <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGF1Qg4pYXRt8CYsnsUGj6NMeTgmxwllySDDLi8snJ9nkDTw/viewform">inquiry form</a>.</p>`
+              }
+        });
+    }
+  if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+  else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+  else window.onload = autorun;
+</script>
+<style>
+output {
+  padding: 40px;
+  margin: 40px 0 80px 0;
+  background: #ddd;
+  display: block;
+  clear: both;
+  width: 100%;
+  max-width: 400px;
+}
+output table#records {
+  width: auto;
+  border: none !important;
+}
+output table#records td,
+output table#records th {
+  border: none;
+}
+output table#records tr {
+  border: none;
+}
+output table#records th {
+  border-bottom: 1px solid black;
+}
+@media screen and (max-width: 480px) {
+  output table#records td,
+  output table#records th {
+    padding: 10px 10px 4px 10px;
+  }
+  output {
+    padding: 20px;
+  }
+}
+</style>

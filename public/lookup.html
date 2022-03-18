@@ -94,7 +94,7 @@
                       const fuse = new Fuse(data,options);
                       for (school of schools) {
                               console.log("Checking",school,"now");
-                              let matches=[];
+                              let matches= new Set();
                               if ( school.includes("|") ) {
                                       tokens = school.split("|");
                                       school = tokens[1].trim();
@@ -102,7 +102,7 @@
                                       let item = data.find(match => match.shortname === school);
                                       let matched = {};
                                       matched.item = item;
-                                      matches.push(matched);
+                                      matches.add(matched);
                                     } else {
                                             console.log("Real Search");
                                             school = school.trim()
@@ -120,8 +120,9 @@
                                                     const matchup = multiples.some(
                                                             skool => skool.dept === school.dept
                                                           )
-                                                    if (!matchup)
-                                                    { multiples.push( school ) }
+                                                    if (!matchup) { 
+                                                            multiples.push( school ) 
+                                                          }
                                                   }
                                             for (let match of matches) {
                                                     match = match.item

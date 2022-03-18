@@ -2,7 +2,10 @@
   "name": "comms",
   "version": "1.0.0",
   "description": "I’m making a little site using netlify serverless functions for little comms helpers.",
+  "homepage": "https://github.com/ctulocal1/comms#readme",
   "main": "index.js",
+  "author": "Nathan Goldbaum",
+  "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,10 +13,13 @@
     "type": "git",
     "url": "git+https://github.com/ctulocal1/comms.git"
   },
-  "author": "Nathan Goldbaum",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ctulocal1/comms/issues"
   },
-  "homepage": "https://github.com/ctulocal1/comms#readme"
+  "scripts": {
+    "postinstall": "netlify-lambda install"
+  }, 
+  "dependencies": {
+    "netlify-lambda": "^1.6.2"
+  }
 }
