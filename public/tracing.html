@@ -27,29 +27,22 @@
           if (records) {
               const FirstName = records[0].FirstName,
                 LastName = records[0].LastName,
-                type = records[0].class;
-              const s = records.length > 1 ? "s" : ""
-              let header = `
- <h3>${records.length} record${s} found for <br>${FirstName} ${LastName}, ${type}</h3>
- <table id="records" border="none" cellspacing="1" cellpadding="1">
- <thead>
- <tr><th scope="col">Position</th><th scope="col">Amount</th></tr>
- </thead>
- <tbody>
- `;
-              let rows = "";
-              let recordText = "";
-              for (record of records) {
-                  let row = `
- <tr><td>${record.HIPPA}</td><td>${record.All}</td></tr>
- `;
-                  rows += row;
-                }
-              let footer = `
- </tbody>
+                Title = records[0].Title.length>0 ? `, ${records[0].Title}` : "",
+                Hopkins = records[0].Hopkins.includes("not") ? `<i>${records[0].Hopkins}</i>` : `<b>${records[0].Hopkins}</b>`,
+                HIPPA = records[0].HIPPA.includes("not") ? `<i>${records[0].HIPPA}</i>` : `<b>${records[0].HIPPA}</b>`,
+                OSHW = records[0].OSHW.includes("not") ? `<i>${records[0].OSHW}</i>` : `<b>${records[0].OSHW}</b>`,
+                All = records[0].All.includes("not") ? `<i>${records[0].All}</i>` : `<b>${records[0].All}</b>`,
+              let readout = `
+ <h3>Record found for  ${email}</h3>
+ <table>
+ <tr><td>Member: </td>${FirstName} ${LastName}${Title}</td></tr>
+ <tr><td>Hopkins Training Complete: </td><td>${Hopkins}</td></tr>
+ <tr><td>HIPPA Training Complete: </td><td>${HIPPA}</td></tr>
+ <tr><td>OSHW Training Complete: </td><td>${OSHW}</td></tr>
+ <tr><td>All Training Complete: </td><td>${All}</td></tr>
  </table>
- `;
-              output.innerHTML = header + rows + footer;
+ `
+              output.innerHTML = readout;
 
             } else {
                 output.innerHTML = `<p>Your CPS email address was not found or there was a server error.</p>
@@ -75,8 +68,13 @@ output table#records {
   width: auto;
   border: none !important;
 }
-output table#records td,
-output table#records th {
+output table#records td i {
+  color: #ed1b2e;
+}
+output table#records td b {
+  color: green;
+}
+output table#records td {
   border: none;
 }
 output table#records tr {
