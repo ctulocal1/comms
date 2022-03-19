@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
   }
   const data = getData ();
   let hits = data.filter(recipient => {
-    return recipient.email.toLowerCase() === Email.toLowerCase()
+    return recipient.Email.toLowerCase() === email.toLowerCase()
   }) 
 
   // if (hits.length > 0) {
