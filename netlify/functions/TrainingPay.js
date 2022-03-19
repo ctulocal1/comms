@@ -21,6 +21,10 @@ exports.handler = async (event, context) => {
   if (1 > 0) {
     return {
       statusCode: 200,
+      headers: {
+        ...CORS_HEADERS,
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify(hits) ,
     };
   } else {
