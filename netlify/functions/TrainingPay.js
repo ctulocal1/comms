@@ -4,9 +4,9 @@ const CORS_HEADERS = {
     'Origin, X-Requested-With, Content-Type, Accept',
 }
 exports.handler = async (event, context) => {
-  const id = event.queryStringParameters.email;
+  const Email = event.queryStringParameters.email;
   console.log(email)
-  if (!email) {
+  if (!Email) {
     return {
       statusCode: 400,
       body: "Your request must include a CPS email address.",
@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
   }
   const data = getData ();
   let hits = data.filter(recipient => {
-    return recipient.Email.toLowerCase() === email.toLowerCase()
+    return recipient.Email.toLowerCase() === Email.toLowerCase()
   }) 
 
   // if (hits.length > 0) {
