@@ -33,6 +33,12 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 404,
       body: JSON.stringify(hits),
+      headers: {
+        'Access-Control-Allow-Origin': 'https://www.ctulocal1.org',
+        'Access-Control-Allow-Headers':
+        'Origin, X-Requested-With, Content-Type, Accept',
+        'Content-Type': 'application/json',
+      },
     }
   }
 };
