@@ -5,7 +5,6 @@ const CORS_HEADERS = {
 }
 exports.handler = async (event, context) => {
   const Email = event.queryStringParameters.email;
-  console.log(email)
   if (!Email) {
     return {
       statusCode: 400,
