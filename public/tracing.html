@@ -14,7 +14,7 @@
       const output = document.getElementById("record");
       lookup.addEventListener("submit", async () => {
           event.preventDefault();
-          output.innerHTML += "<p>Searching database...</p>";
+          output.innerHTML = "<p>Searching database...</p>";
           let email = cpsemail.value;
           let fetchURL = `https://sad-archimedes-551ea7.netlify.app/.netlify/functions/TrainingPay?email=${email}`;
           const isOk = response => response.ok ? response.json() : Promise.reject(new Error('Failed to load data from server'))
@@ -24,18 +24,21 @@
             .catch(error => {
                 console.log(error)
               });
-          if (records) {
+          if (records.length > 0) {
               const FirstName = records[0].FirstName,
                 LastName = records[0].LastName,
-                Title = records[0].Title.length>0 ? `, ${records[0].Title}` : "",
                 Hopkins = records[0].Hopkins.includes("not") ? `<i>${records[0].Hopkins}</i>` : `<b>${records[0].Hopkins}</b>`,
-                HIPPA = records[0].HIPPA.includes("not") ? `<i>${records[0].HIPPA}</i>` : `<b>${records[0].HIPPA}</b>`,
-                OSHW = records[0].OSHW.includes("not") ? `<i>${records[0].OSHW}</i>` : `<b>${records[0].OSHW}</b>`,
-                All = records[0].All.includes("not") ? `<i>${records[0].All}</i>` : `<b>${records[0].All}</b>`,
+                HIPPA = records[0].HIPPA.includes("NOT") ? `<i>${records[0].HIPPA}</i>` : `<b>${records[0].HIPPA}</b>`,
+                OSHW = records[0].OSHW.includes("NOT") ? `<i>${records[0].OSHW}</i>` : `<b>${records[0].OSHW}</b>`,
+                All = records[0].All.includes("NOT") ? `<i>${records[0].All}</i>` : `<b>${records[0].All}</b>`;
+              let Title = "";
+              if (records[0].Title) {
+                  Title = `, ${records[0].Title}`
+                }
               let readout = `
- <h3>Record found for  ${email}</h3>
- <table>
- <tr><td>Member: </td>${FirstName} ${LastName}${Title}</td></tr>
+ <h3>Record found for  ${email}.</h3>
+ <table id="records">
+ <tr><td>Member: </td><td>${FirstName} ${LastName}${Title}</td></tr>
  <tr><td>Hopkins Training Complete: </td><td>${Hopkins}</td></tr>
  <tr><td>HIPPA Training Complete: </td><td>${HIPPA}</td></tr>
  <tr><td>OSHW Training Complete: </td><td>${OSHW}</td></tr>
@@ -46,7 +49,7 @@
 
             } else {
                 output.innerHTML = `<p>Your CPS email address was not found or there was a server error.</p>
- <p>If you think this was a mistake, please complete our <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGF1Qg4pYXRt8CYsnsUGj6NMeTgmxwllySDDLi8snJ9nkDTw/viewform">inquiry form</a>.</p>`
+                  <p>If you think this was a mistake, please complete our <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGF1Qg4pYXRt8CYsnsUGj6NMeTgmxwllySDDLi8snJ9nkDTw/viewform">inquiry form</a>.</p>`
               }
         });
     }
@@ -62,7 +65,7 @@ output {
   display: block;
   clear: both;
   width: 100%;
-  max-width: 400px;
+  max-width: 700px;
 }
 output table#records {
   width: auto;
@@ -70,9 +73,13 @@ output table#records {
 }
 output table#records td i {
   color: #ed1b2e;
+  font-weight: bold;
+  font-style: normal;
 }
 output table#records td b {
   color: green;
+  font-weight: bold;
+  font-style: normal;
 }
 output table#records td {
   border: none;
@@ -83,13 +90,13 @@ output table#records tr {
 output table#records th {
   border-bottom: 1px solid black;
 }
-@media screen and (max-width: 480px) {
-  output table#records td,
-  output table#records th {
-    padding: 10px 10px 4px 10px;
+  @media screen and (max-width: 480px) {
+    output table#records td,
+    output table#records th {
+      padding: 10px 10px 4px 10px;
+    }
+    output {
+      padding: 20px;
+    }
   }
-  output {
-    padding: 20px;
-  }
-}
 </style>

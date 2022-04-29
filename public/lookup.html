@@ -34,7 +34,7 @@
         <ol id="singles"></ol>
         <hr>
         <h3 class="target">Target List for Action Network</h3>
-        <p class="target">Target with the Field Value category (⅔&nbsp;down the page) and choose c468_work_unit_number.</p>
+        <p class="target">Start in Actions by selecting the most recent membership uploads. Then target the specific schools using the Field Value category (⅔&nbsp;down the page) and select c468_work_unit_number. Then paste the list of numbers in the value input. Then click the Target & Send button at bottom.</p>
         <p>
         <button class="btn" data-clipboard-target="#targeting">
           <img src="assets/clippy.svg" alt="Copy list to clipboard" />
@@ -50,7 +50,7 @@
     <script type="text/javascript">
       // Form processing code
       myClipboard()
-      fetch('assets/list-of-schools.json')
+      fetch('/assets/data/list-of-schools.json')
         .then(response => response.json())
         .then(data => main(data))
 
@@ -796,6 +796,7 @@
                       {dept: "22641", shortname: "ALDRIDGE"},
                       {dept: "66442", shortname: "URBAN PREP - BRONZEVILLE HS"},
                       {dept: "66441", shortname: "URBAN PREP - ENGLEWOOD HS"},
+                      {dept: "63071", shortname: "URBAN PREP - WEST"},
                       {dept: "22241", shortname: "BENNETT"},
                       {dept: "22331", shortname: "BRIGHT"},
                       {dept: "47051", shortname: "BROOKS HS"},

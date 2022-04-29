@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Data Map</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/shell.css">
+    <style type="text/css">
+    * {
+      box-sizing: border-box;
+    }
+    main {
+      position: relative;
+    }
+    #map {
+      width: 100%;
+      max-width: 400px;
+      height: 600px;
+      background: #dddfff;
+      padding: 40px;
+      position: absolute;
+      right: 40px;
+      text-align:center;
+    }
+    form#modal {
+      display: none;
+      position: absolute;
+      float:right;
+      width: 80%;
+      min-height: 400px;
+      padding: 16px 40px;
+      box-shadow: 2px 3px 8px #888888;
+      background: #ffffe0;
+      top: 80px;
+      left: calc(10%);
+      z-index: 2;
+    }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="map">
+        Map
+      </section>
+
+      <form id="datamaps">
+        <button id="start" onclick="document.getElementById('modal').style.display='block';">
+          Get Started
+        </button>
+      </form>
+      <form id="modal">
+        <section id="datachoice">
+        </section>
+        <section id="boundaries">
+          <h2>Choose Boundary Categories</h2>
+          <ul style="list-style-type: none">
+            <li>
+              <input type="radio" id="schools" name="layer" value="schools"><label for="schools">School Info Only</label>
+            </li>
+            <li>
+              <input type="radio" id="community" name="layer" value="community"><label for="community">Community Area</label>
+            </li>
+            <li>
+              <input type="radio" id="county" name="layer" value="county"><label>Cook County District</label>
+            </li>
+          </ul>
+        </section>
+      </form>
+    </main>
+
+    <footer>
+      <p>If you have any issues, <a href="mailto:NathanGoldbaum@ctulocal1.org?subject=Tools website">email Nate Goldbaum</a> or call his cell phone at 773-490-5996.
+      </p>
+    </footer>
+
+  </body>
+</html>
+
