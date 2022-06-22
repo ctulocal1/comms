@@ -28,13 +28,23 @@
 // 
 // Add a new map to the list
 //
-//   Get data (upload, if initial)
+//   Choose type of map: 
+//   - School-by-school or Values:Regions
+//     School-by-School -
+//      - Straight Values: Regional will also have to be straight value ranges
+//      - Formulas: Percentages/ Ratios will need to be applicable on regions
+//     Values:Regions -
+//      - Categories Map
+//      - Value Ranges
 //
-//   Connect user data to schools/areas data
+//   Get data (indicate if upload needed)
+//    - If upload needed:
+//      - Dialog to select and upload file
+//      - Parse using PapaParse
+//      - Choose key to connect user data to schools/areas data
 //
-//   Choose boundary
-//
-//   Choose columns formula for point data
+//   - Choose boundary
+//   - Choose columns formula for point data
 //
 //   Choose columns formula for aggregate (area) data
 //

@@ -1,0 +1,251 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CTU Communications Tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/shell.css">
+  </head>
+  <body>
+
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      <div>
+        <h2>Original List</h2>
+        <p>Paste the list of delegates not present copied from the word doc given to you by Norma.</p>
+        <form id="form">
+          <textarea id="schools" autofocus="true"></textarea>
+          <button id="query" type="submit">Convert</button>
+        </form>
+      </div>
+      <div id="response">
+        <output id="unmatched"></output>
+        <output id="multiples"></output>
+        <h2>
+          List to copy into WordPress
+        </h2>
+        <p class="target">Here is your code.</p>
+        <p>
+        <button class="btn" data-clipboard-target="#targeting">
+          <img src="assets/clippy.svg" alt="Copy list to clipboard" />
+        </button>
+        <span id="copiedMsg"></span>
+        </p>
+        <output id="targeting"></output>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+    <script type="text/javascript">
+      // Form processing code
+      myClipboard()
+main('');
+      function main (data) {
+              console.log("Main called.")
+              // Assign element bindings
+              const query = document.querySelector("#query"); // submit button
+              const schoolsIn = document.querySelector("#schools") // list of schools to query
+              const myform = document.querySelector("#form"); // wraps school list & submit button
+              const singles = document.querySelector("#singles")
+              const unmatchArea = document.querySelector("#unmatched")
+              const multiArea = document.querySelector("#multiples")
+              const targeting = document.querySelector("#targeting")
+              const response = document.querySelector("#response");
+
+              // We don’t want to actually submit
+              myform.addEventListener('submit', (e) => {
+                      e.preventDefault();
+                    });
+
+              // Here’s the actual function that processes queries.
+              query.addEventListener("click", (e) => {
+
+                      e.preventDefault();
+                      // Reset response area
+                      let targetList = "", refineList = ""
+                      /*
+                      singles.innerHTML = ""
+                      unmatchArea.innerHTML = ""
+                      multiArea.innerHTML = ""
+*/
+
+                      // Turn textarea value into list for lookup
+                      const input = schoolsIn.value
+                      const output = listToCode(input);
+                      targeting.innerHTML = output;
+                    }
+
+           ) };
+
+function listToCode (list) {
+const regx = /\n/ 
+const regexN = /^NET*WORK/;
+const regexAUSL = /^AUSL/;
+const regexCTUACTS = /^CTU/;
+const regexCity = /^CITY/;
+const lines = list.toString().split(regx)
+let secondBlank = false;
+
+let output = "";
+
+for ( let line of lines ) {
+  if (output === "") {
+          if (line.trim().length===0) {}
+          else {
+                  line = line.replace(regexN,'Network');
+                  output += `<h3>${ line }</h3>
+<ul>
+`;
+                }
+        }
+  else if (line.trim().length === 0) {
+          output += `</ul>
+
+`
+        }
+  else if (!line.match(/[a-z]/)) {
+          if (line.match(regexN)) {
+                  console.log("Network!",line)
+                  line = line.replace(regexN,'Network');
+                  output += `<h3>${ line }</h3>
+<ul>
+`;
+                } else if (line.match(regexAUSL)) {
+                        let words = line.split(' ');
+                        let area = toTitleCase( words[1] );
+                        line = words[0].concat(` ${area}`);
+                        output += `<h3>${ line }</h3>
+<ul>
+`;
+                } else if (line.match(regexCity)) {
+                        line = toTitleCase(line);
+                        output += `<h3>${ line }</h3>
+<ul>
+`;
+                            } else {
+                                    output += `<h3>${ line }</h3>
+<ul>
+`;
+                                  }
+        } else {
+                output += `  <li>${line}</li>
+`
+              }
+}
+      output += `</ul>`;
+return output;
+}
+      function toTitleCase(str) {
+              let value = str.toLowerCase().split(' ').map(function (word) {
+                      return (word.charAt(0).toUpperCase() + word.slice(1));
+                    }).join(' ');
+              value = value.replace('City-wide','City-Wide');
+              return value;
+            }
+
+
+      // Clipboard code
+      function myClipboard () {
+              var clipboard = new ClipboardJS('.btn');
+
+              clipboard.on('success', function (e) {
+                      console.info('Action:', e.action);
+                      console.info('Text:', e.text);
+                      console.info('Trigger:', e.trigger);
+
+                      sayCopied()
+
+                      e.clearSelection();
+                    });
+
+              clipboard.on('error', function (e) {
+                      console.error('Action:', e.action);
+                      console.error('Trigger:', e.trigger);
+                    });
+            }
+      function sayCopied (){
+              const targeting = document.querySelector("#targeting");
+              const msgTarget = document.querySelector( "#copiedMsg" );
+              targeting.style.background = "#222299";
+              let unhighlight = setTimeout( () => targeting.style.background = "transparent", 300);
+              msgTarget.innerText = "COPIED!";
+              let disappear = setTimeout( () => msgTarget.innerText = '', 1400);
+            }
+
+    </script>
+    <style type="text/css">
+      main {
+        width: 96%;
+        max-width: 900px;
+        margin: 0 auto;
+        color: #222222;
+        display: flex;
+        font-size: 18px;
+        flex-wrap: wrap;
+      }
+      main > * {
+        flex: 2 0 240px
+      }
+      main > div:first-child {
+        box-sizing: border-box;
+        padding-right: 20px;
+        flex: 3 0 440px
+      }
+      form#form {
+        display: flex;
+        flex-direction:column;
+        align-items: flex-start;
+      }
+      form#form button{
+        order:0;
+      }
+      textarea {
+        order: 1;
+        font-size: 18px;
+        width: 90%;
+        height: clamp(40px,10em,40vh);
+        background: rgba(170, 170, 177, 1);
+      }
+      form#form textarea {
+        height: clamp(280px,160em,70vh);
+      }
+      #query {
+        font-size: 24px;
+        margin: 5px 0;
+      }
+      h3.target {
+        margin-bottom: 0;
+      }
+      p.target {
+        margin-top: 0.5em;
+      }
+      output#targeting {
+        display:block;
+        background: #eeeeee;
+        padding: 10px;
+      }
+      output#targeting ul,
+      output#targeting li,
+      output#targeting h3{
+        background: transparent;
+      }
+      footer {
+        width: 96%;
+        max-width: 900px;
+      }
+    </style>
+
+    <footer>
+      <p>If you have any issues, <a href="mailto:NathanGoldbaum@ctulocal1.org?subject=Tools website">email Nate Goldbaum</a> or call his cell phone at 773-490-5996.
+      </p>
+    </footer>
+
+  </body>
+</html>
