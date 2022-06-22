@@ -15,8 +15,9 @@
       </nav>
     </header>
 
-      <h1>Delegates Not Present converter</h1>
     <main role="main">
+      <h1>Delegates Not Present converter</h1>
+      <section>
       <div>
         <h2>Original List</h2>
         <p>Paste the list of delegates not present copied from the word doc given to you by Norma.</p>
@@ -40,6 +41,7 @@
         </p>
         <output id="targeting"></output>
       </div>
+      </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
@@ -182,7 +184,7 @@ return output;
 
     </script>
     <style type="text/css">
-      main {
+      main section {
         width: 96%;
         max-width: 900px;
         margin: 0 auto;
@@ -191,10 +193,10 @@ return output;
         font-size: 18px;
         flex-wrap: wrap;
       }
-      main > * {
+      main section > * {
         flex: 2 0 240px
       }
-      main > div:first-child {
+      main section > div:first-child {
         box-sizing: border-box;
         padding-right: 20px;
         flex: 3 0 440px
