@@ -1,0 +1,310 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>In Memoriam Converter</title>
+  <link rel="stylesheet" type="text/css" href="/assets/css/shell.css">
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main role="main">
+  <h1>In Memoriam converter</h1>
+  <section>
+  <div>
+    <h2>Original List</h2>
+    <p>The list that comes from CTPF has several columns. Eliminate all columns except: the three columns with names, the death date, and the name of the deceased. The columns should be in the following order (as they came, but with deletions): First Name, Middle Name, Last Name, Death Date, Retired (School). Then, <em>leaving out the header row,</em> copy the list and paste it below.
+</p>
+    <form id="form">
+      <textarea id="rows" autofocus="true"></textarea>
+      <button id="query" type="submit">Convert</button>
+    </form>
+  </div>
+  <div id="response">
+    <h2>
+      List to copy into WordPress
+    </h2>
+    <p class="target">Here is your code.</p>
+    <p>
+    <button class="btn" data-clipboard-target="#targeting">
+      <img alt="Copy list to clipboard" />
+    </button>
+    <span id="copiedMsg"></span>
+    </p>
+    <output id="targeting"></output>
+  </div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+<script type="text/javascript">
+  // Form processing code
+  myClipboard()
+  main('');
+  function main (data) {
+    // Assign element bindings
+    const query = document.querySelector("#query");
+    const rowsIn = document.querySelector("#rows"); 
+    const myform = document.querySelector("#form");
+    const targeting = document.querySelector("#targeting");
+    const response = document.querySelector("#response");
+
+    // We don’t want to actually submit
+    myform.addEventListener('submit', (e) => {
+      e.preventDefault();
+    });
+
+    // Here’s the actual function that processes queries.
+    query.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Convert the tab-separated list into an HTML table.
+      const input = rowsIn.value
+      const output = listToCode(input);
+      targeting.innerHTML = output;
+    });
+  };
+
+  // Function to perform conversion.
+  function listToCode (list) {
+    const lines = list.toString().split(/\n/)
+
+    const {yrs, decedents} = processLines(lines);
+    let years = [...yrs].sort();
+    let code = "";
+    for (const year of years) {
+        code += tableHead(year);
+        code += tableRows(year,decedents);
+        code += tableFoot();
+      }
+    return code;
+  }
+  function processLines(lines) {
+    let yrs = new Set();
+    let decedents = [];
+    for ( const line of lines ) {
+        if (line.length > 0) {
+            const cells = line.split(/\t/);
+            let decedent = {
+                first: cells[0],
+                middle: cells[1],
+                last: cells[2],
+                died: new Date( cells[3] ),
+                school: cells[4],
+              };
+            yrs.add(decedent.died.getFullYear());
+            row = processDecedent(decedent);
+            decedents.push(row);
+          }
+      }
+      return {yrs,decedents};
+  }
+  function tableHead (year) {
+    return `
+<table>
+  <thead>
+    <tr><td><h2>${year}</h2></td><td></td></tr>
+  </thead>
+  <tbody>`;
+  }
+
+  function tableFoot () {
+    return `
+ </tbody>
+ </table>
+ `
+    }
+
+  function tableRows (year,decedents) {
+      let diedThisYear = decedents.filter ( 
+          person => Number.parseInt(year) === person.died.getFullYear()
+        );
+      diedThisYear.sort( function(a, b) {
+          const nameA = a.last.toUpperCase(); // ignore upper and lowercase
+          const nameB = b.last.toUpperCase(); // ignore upper and lowercase
+          if (a.died < b.died) {
+              return -1;
+            }
+          if (b.died < a.died) {
+              return 1;
+            }
+          if (nameA < nameB) {
+            return -1;
+          }
+          if (nameA > nameB) {
+            return 1;
+          }
+          return 0;
+        });
+      let tableCode = "";
+      for (dier of diedThisYear) {
+          tableCode += dier.code;
+        };
+      return tableCode;
+    }
+
+  function processDecedent(row) {
+      row.school = processSchool(row.school);
+      row = processName(row);
+      row.dateString = dateStringify(row.died);
+      row.code = `
+ <tr><td>${row.dateString}</td><td>${row.fullname}, <i>${row.school}</i></td></tr>`
+      return row; 
+    }
+
+  function processSchool (school) {
+      school = toTitleCase(school);
+      school = school.replace(/^\s*Ps[-0-9 ]*/,"");
+      school = school.replaceAll(/  */g," ");
+      school = school.replace(/h\.* *s\.*/i,"HS");
+      school = school.replace("Cvs","CVS");
+      school = school.replace("Oss","OSS");
+      return school;
+    }
+
+  function processName (row) {
+      row.fullname = toTitleCase(row.first);
+      if (!row.middle) {
+          row.middle = "";
+        }
+      if (row.middle.length === 1) {
+          row.middle += ".";
+        }
+      if (row.middle.length > 0) {
+          row.fullname += " " + toTitleCase(row.middle);
+        }
+      row.fullname += " " + toTitleCase(row.last);
+      return row;
+    }
+
+  function dateStringify (died) {
+      
+      const month_names = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      let diedString = `${month_names[died.getMonth()]} ${died.getDate()}`;
+      return diedString;
+    }
+
+function toTitleCase(str) {
+  if (str) {
+    str = str.replace(/\w\S*/g, word => {
+      return word.charAt(0).toUpperCase() +
+             word.slice(1).toLowerCase();
+    });
+    str = str.replace(/^mc\S*/ig, wd => {
+        return `Mc${wd.charAt(2).toUpperCase()}${wd.slice(3).toLowerCase()}`;
+    });
+    str = str.replace(/'\S*/ig, wd => {
+        return `’${wd.charAt(1).toUpperCase()}${wd.slice(2).toLowerCase()}`;
+    });
+    return str;
+    }
+  else {
+      return "";
+    }
+  }
+
+  // Clipboard code
+  function myClipboard () {
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
+
+      sayCopied()
+
+      e.clearSelection();
+      });
+
+    clipboard.on('error', function (e) {
+      console.error('Action:', e.action);
+      console.error('Trigger:', e.trigger);
+      });
+    }
+  function sayCopied (){
+    const targeting = document.querySelector("#targeting");
+    const msgTarget = document.querySelector( "#copiedMsg" );
+    targeting.style.background = "#222299";
+    let unhighlight = setTimeout( () => targeting.style.background = "transparent", 300);
+    msgTarget.innerText = "COPIED!";
+    let disappear = setTimeout( () => msgTarget.innerText = '', 1400);
+    }
+
+</script>
+<style type="text/css">
+  main section {
+    width: 96%;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #222222;
+    display: flex;
+    font-size: 18px;
+    flex-wrap: wrap;
+  }
+  main section > * {
+    flex: 2 0 240px
+  }
+  main section > div:first-child {
+    box-sizing: border-box;
+    padding-right: 20px;
+    flex: 3 0 440px
+  }
+  form#form {
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+  }
+  form#form button{
+    order:0;
+  }
+  textarea {
+    order: 1;
+    font-size: 18px;
+    width: 90%;
+    height: clamp(40px,10em,40vh);
+    background: rgba(170, 170, 177, 1);
+  }
+  form#form textarea {
+    height: clamp(280px,160em,70vh);
+  }
+  #query {
+    font-size: 24px;
+    margin: 5px 0;
+  }
+  h3.target {
+    margin-bottom: 0;
+  }
+  p.target {
+    margin-top: 0.5em;
+  }
+  output#targeting {
+    display:block;
+    background: #eeeeee;
+    padding: 10px;
+  }
+  output#targeting ul,
+  output#targeting li,
+  output#targeting h3{
+    background: transparent;
+  }
+  footer {
+    width: 96%;
+    max-width: 900px;
+  }
+</style>
+
+    <footer>
+      <p>If you have any issues, <a href="mailto:NathanGoldbaum@ctulocal1.org?subject=Tools website">email Nate Goldbaum</a> or call his cell phone at 773-490-5996.
+      </p>
+    </footer>
+
+  </body>
+</html>
