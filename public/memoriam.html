@@ -35,9 +35,13 @@
     <button class="btn" data-clipboard-target="#targeting">
       <img alt="Copy list to clipboard" />
     </button>
+    <button class="btn" data-clipboard-target="#codeTarget">
+      <img alt="Copy HTML to clipboard" />
+    </button>
     <span id="copiedMsg"></span>
     </p>
     <output id="targeting"></output>
+    <output id="codeTarget"></output>
   </div>
   </section>
 </main>
@@ -54,6 +58,7 @@
     const rowsIn = document.querySelector("#rows"); 
     const myform = document.querySelector("#form");
     const targeting = document.querySelector("#targeting");
+    const codeTarget = document.querySelector("#codeTarget");
     const response = document.querySelector("#response");
 
     // We don’t want to actually submit
@@ -69,6 +74,7 @@
       const input = rowsIn.value
       const output = listToCode(input);
       targeting.innerHTML = output;
+      codesTarget.innerText = output;
     });
   };
 
@@ -287,6 +293,11 @@ function toTitleCase(str) {
   }
   p.target {
     margin-top: 0.5em;
+  }
+  output#codeTarget {
+    height: 1px;
+    width: 1px; 
+    overflow:hidden;
   }
   output#targeting {
     display:block;
