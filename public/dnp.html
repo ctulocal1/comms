@@ -27,8 +27,6 @@
         </form>
       </div>
       <div id="response">
-        <output id="unmatched"></output>
-        <output id="multiples"></output>
         <h2>
           List to copy into WordPress
         </h2>
@@ -39,7 +37,11 @@
         </button>
         <span id="copiedMsg"></span>
         </p>
+        <button class="btn" data-clipboard-target="#codeTarget">
+          <img alt="Copy HTML to clipboard" />
+        </button>
         <output id="targeting"></output>
+        <output id="codeTarget"></output>
       </div>
       </section>
     </main>
@@ -60,6 +62,7 @@ main('');
               const unmatchArea = document.querySelector("#unmatched")
               const multiArea = document.querySelector("#multiples")
               const targeting = document.querySelector("#targeting")
+              const codeTarget = document.querySelector("#codeTarget")
               const response = document.querySelector("#response");
 
               // We don’t want to actually submit
@@ -83,6 +86,7 @@ main('');
                       const input = schoolsIn.value
                       const output = listToCode(input);
                       targeting.innerHTML = output;
+                      codeTarget.innerText = output;
                     }
 
            ) };
