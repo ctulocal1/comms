@@ -163,7 +163,7 @@
       school = toTitleCase(school);
       school = school.replace(/^\s*Ps[-0-9 ]*/,"");
       school = school.replaceAll(/  */g," ");
-      school = school.replace(/h\.* *s\.*/i,"HS");
+      school = school.replace(/ h\.* *s\.*/i," HS");
       school = school.replace("Cvs","CVS");
       school = school.replace("Oss","OSS");
       return school;
@@ -200,7 +200,10 @@ function toTitleCase(str) {
     str = str.replace(/^mc\S*/ig, wd => {
         return `Mc${wd.charAt(2).toUpperCase()}${wd.slice(3).toLowerCase()}`;
     });
-    str = str.replace(/'\S*/ig, wd => {
+    str = str.replace(/-\S*/ig, wd => {
+        return `’${wd.charAt(1).toUpperCase()}${wd.slice(2).toLowerCase()}`;
+    });
+    str = str.replace(/-\S*/ig, wd => {
         return `’${wd.charAt(1).toUpperCase()}${wd.slice(2).toLowerCase()}`;
     });
     return str;
