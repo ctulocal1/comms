@@ -200,7 +200,7 @@ function toTitleCase(str) {
     str = str.replace(/^mc\S*/ig, wd => {
         return `Mc${wd.charAt(2).toUpperCase()}${wd.slice(3).toLowerCase()}`;
     });
-    str = str.replace(/-\S*/ig, wd => {
+    str = str.replace(/'\S*/ig, wd => {
         return `’${wd.charAt(1).toUpperCase()}${wd.slice(2).toLowerCase()}`;
     });
     str = str.replace(/-\S*/ig, wd => {
