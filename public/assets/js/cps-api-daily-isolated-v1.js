@@ -20,7 +20,7 @@ function autorun() {
     dataDisplay.innerHTML = "<p>The data table will appear here after the query response is returned and processed.</p>";
     const sentQuery = new Date();
     progress.innerText = "Query sent to CPS API at " + sentQuery + ". Response can take a full minute or longer, depending on network traffic.\nAwaiting Response.";
-    const fetchURL = `https://api.cps.edu/health/v1/SchoolNoAdmittanceSummary`;
+    const fetchURL = `https://api.cps.edu/health/v1/SchoolCOVIDDaySummary`;
     let counting = setInterval (function() { progress.innerText += "." }, 1000);
     let data = await fetch(fetchURL).then(
       response => response.json()
@@ -101,8 +101,8 @@ function GroupDataBySchool (data,datePicker,populations) {
     
     if (schoolData) { // If school is already in the array push this report's data.
       const report = {};
-      report.date = datum.RecordDate;
-      report.persons = parseInt( datum.PersonTotal );
+      report.date = datum.CaseCountDate;
+      report.persons = parseInt( datum.TotalCaseCount );
       schoolData.dates.push(report);
 
     } else { // If school is not found in the array, create the item.
@@ -114,8 +114,8 @@ function GroupDataBySchool (data,datePicker,populations) {
         school.population = matchedSchool.students;
       }
       const report = {};
-      report.date = datum.RecordDate;
-      report.persons = parseInt( datum.PersonTotal );
+      report.date = datum.CaseCountDate;
+      report.persons = parseInt( datum.TotalCaseCount );
       school.dates = [];
       school.dates.push(report);
       schoolsData.push(school);
