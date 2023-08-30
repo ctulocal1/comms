@@ -13,7 +13,7 @@ function autorun() {
   buttons.style.visibility = "hidden";
   let bySchool = [];
   lookup.addEventListener("click", async () => {
-    let populations = await fetch("/assets/data/studentcounts.json" )
+    let populations = await fetch("https://ctu.ac/assets/data/studentcounts.json" )
     .then(response => response.json())
     //
     // Sending query
