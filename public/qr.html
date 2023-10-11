@@ -36,7 +36,7 @@
                     <button type="button" class="accordion accordion--open">Main Options</button>
                     <div class="panel panel--open">
                         <label for="form-data">Data</label>
-                        <input node="data" node-change-event="oninput" id="form-data" type="text" value="https://qr-code-styling.com" />
+                        <input node="data" node-change-event="oninput" id="form-data" type="text" value="http://ctu.sh" />
                         <label for="form-image-file">Image File</label>
                         <div class="buttons-container">
                             <input node="image" node-data-field="files" id="form-image-file" type="file" />
@@ -44,11 +44,11 @@
                         </div>
                         <label for="form-width">Width</label>
                         <div>
-                            <input node="width" id="form-width" type="number" min="100" max="10000" value="300"/>
+                            <input node="width" id="form-width" type="number" min="100" max="10000" value="1200"/>
                         </div>
                         <label for="form-height">Height</label>
                         <div>
-                            <input node="height" id="form-height" type="number" min="100" max="10000" value="300"/>
+                            <input node="height" id="form-height" type="number" min="100" max="10000" value="1200"/>
                         </div>
                         <label for="form-height">Margin</label>
                         <div>
@@ -81,7 +81,7 @@
                         </div>
                         <label class="dotsOptionsHelper.colorType.single" for="form-dots-color">Dots Color</label>
                         <div class="dotsOptionsHelper.colorType.single">
-                            <input node="dotsOptions.color" id="form-dots-color" type="color" value="#6a1a4c"/>
+                            <input node="dotsOptions.color" id="form-dots-color" type="color" value="#ed1b2f"/>
                         </div>
                         <label class="dotsOptionsHelper.colorType.gradient" style="visibility: hidden; height: 0">Gradient Type</label>
                         <div class="dotsOptionsHelper.colorType.gradient space-between-container" style="visibility: hidden; height: 0">
@@ -96,8 +96,8 @@
                         </div>
                         <label class="dotsOptionsHelper.colorType.gradient" style="visibility: hidden; height: 0">Dots Gradient</label>
                         <div class="dotsOptionsHelper.colorType.gradient" style="visibility: hidden; height: 0">
-                            <input node="dotsOptionsHelper.gradient.color1" type="color" value="#6a1a4c"/>
-                            <input node="dotsOptionsHelper.gradient.color2" type="color" value="#6a1a4c"/>
+                            <input node="dotsOptionsHelper.gradient.color1" type="color" value="#ed1b2f"/>
+                            <input node="dotsOptionsHelper.gradient.color2" type="color" value="#ed1b2f"/>
                         </div>
                         <label class="dotsOptionsHelper.colorType.gradient" for="form-dots-gradient-rotation" style="visibility: hidden; height: 0">Rotation</label>
                         <div class="dotsOptionsHelper.colorType.gradient" style="visibility: hidden; height: 0">
@@ -245,18 +245,18 @@
                         </div>
                         <label for="form-image-size">Image Size</label>
                         <div>
-                            <input node="imageOptions.imageSize" id="form-image-size" type="number" min="0" max="1" step="0.1" value="0.4"/>
+                            <input node="imageOptions.imageSize" id="form-image-size" type="number" min="0" max="1" step="0.1" value="0.6"/>
                         </div>
                         <label for="form-image-margin">Margin</label>
                         <div>
-                            <input node="imageOptions.margin" id="form-image-margin" type="number" min="0" max="10000" value="0"/>
+                            <input node="imageOptions.margin" id="form-image-margin" type="number" min="0" max="10000" value="10"/>
                         </div>
                     </div>
                     <button type="button" class="accordion">QR Options</button>
                     <div class="panel">
                         <label for="form-qr-type-number">Type Number</label>
                         <div>
-                            <input node="qrOptions.typeNumber" id="form-qr-type-number" type="number" min="0" max="40" value="0"/>
+                            <input node="qrOptions.typeNumber" id="form-qr-type-number" type="number" min="0" max="40" value="8"/>
                         </div>
                         <label for="form-qr-mode">Mode</label>
                         <div>
