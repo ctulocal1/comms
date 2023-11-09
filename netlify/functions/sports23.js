@@ -1,5 +1,5 @@
 const CORS_HEADERS = {
-  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Origin': 'https://www.ctulocal1.org',
   'Access-Control-Allow-Headers':
     'Origin, X-Requested-With, Content-Type, Accept',
 }
@@ -21,7 +21,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 200,
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': 'https://www.ctulocal1.org',
         'Access-Control-Allow-Headers':
         'Origin, X-Requested-With, Content-Type, Accept',
         'Content-Type': 'application/json',
@@ -24865,9 +24865,24 @@ function getData () {
       lastname: "Wright",
       firstname: "Kajuan",
     },
-22-23 Fall Liaison	29335	KareemJohnson
-22-23 Winter Liaison	29335	KareemJohnson
-22-23 Spring Liaison	29335	KareemJohnson
+{
+  type: "22-23 Fall Liaison",
+    id: 29335,
+    lastname: "Johnson",
+    firstname: "Kareem",
+},
+{
+  type: "22-23 Winter Liaison",
+    id: 29335,
+    lastname: "Johnson",
+    firstname: "Kareem",
+},
+{
+  type: "22-23 Spring Liaison",
+    id: 29335,
+    lastname: "Johnson",
+    firstname: "Kareem",
+},
     {
       type: "22-23 Fall Liaison",
       id: 222808,
@@ -26188,7 +26203,12 @@ function getData () {
       lastname: "Rico",
       firstname: "Nestor",
     },
-22-23 Fall Liaison	208681 AP	Nicholas Cartagena
+{
+  type: "22-23 Fall Liaison",
+    id: 208681,
+    lastname: "Cartagena",
+    firstname: "Nicholas",
+},
     {
       type: "22-23 Winter Liaison",
       id: 208681,
@@ -27490,7 +27510,7 @@ function getData () {
       id: 146588,
       lastname: "Farmer",
       firstname: "Yvette",
-    }
+    },
   ];
 return data;
 }
