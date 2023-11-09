@@ -31,7 +31,7 @@ exports.handler = async (event, context) => {
   } else {
     return {
       statusCode: 404,
-      body: JSON.stringif(hits),
+      body: JSON.stringify(hits),
     }
   }
 };
