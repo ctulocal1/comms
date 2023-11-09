@@ -27490,7 +27490,7 @@ function getData () {
       id: 146588,
       lastname: "Farmer",
       firstname: "Yvette",
-    },
+    }
   ];
 return data;
 }
