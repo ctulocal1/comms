@@ -21,7 +21,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 200,
       headers: {
-        'Access-Control-Allow-Origin': 'https://www.ctulocal1.org',
+        'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers':
         'Origin, X-Requested-With, Content-Type, Accept',
         'Content-Type': 'application/json',
