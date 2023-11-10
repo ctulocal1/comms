@@ -23440,14 +23440,14 @@ function getData () {
     {
       type: "22-23 Winter Liaison",
       id: 249183,
-      lastname: ""Julius"  Oni",
-      firstname: "Dolapo",
+      lastname: "Oni",
+      firstname: "Dolapo ‘Julius’",
     },
     {
       type: "22-23 Spring Liaison",
       id: 249183,
-      lastname: ""Julius"  Oni",
-      firstname: "Dolapo",
+      lastname: "Oni",
+      firstname: "Dolapo ‘Julius’",
     },
     {
       type: "22-23 Fall Liaison",
@@ -24865,24 +24865,24 @@ function getData () {
       lastname: "Wright",
       firstname: "Kajuan",
     },
-{
-  type: "22-23 Fall Liaison",
-    id: 29335,
-    lastname: "Johnson",
-    firstname: "Kareem",
-},
-{
-  type: "22-23 Winter Liaison",
-    id: 29335,
-    lastname: "Johnson",
-    firstname: "Kareem",
-},
-{
-  type: "22-23 Spring Liaison",
-    id: 29335,
-    lastname: "Johnson",
-    firstname: "Kareem",
-},
+    {
+      type: "22-23 Fall Liaison",
+        id: 29335,
+        lastname: "Johnson",
+        firstname: "Kareem",
+    },
+    {
+      type: "22-23 Winter Liaison",
+        id: 29335,
+        lastname: "Johnson",
+        firstname: "Kareem",
+    },
+    {
+      type: "22-23 Spring Liaison",
+        id: 29335,
+        lastname: "Johnson",
+        firstname: "Kareem",
+    },
     {
       type: "22-23 Fall Liaison",
       id: 222808,
@@ -26203,12 +26203,12 @@ function getData () {
       lastname: "Rico",
       firstname: "Nestor",
     },
-{
-  type: "22-23 Fall Liaison",
-    id: 208681,
-    lastname: "Cartagena",
-    firstname: "Nicholas",
-},
+    {
+      type: "22-23 Fall Liaison",
+        id: 208681,
+        lastname: "Cartagena",
+        firstname: "Nicholas",
+    },
     {
       type: "22-23 Winter Liaison",
       id: 208681,
