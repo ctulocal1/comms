@@ -24,9 +24,9 @@ exports.handler = async (event, context) => {
             },
             body: "Reply",
         };
-    });
+    };
 };
-async function getPDF () {
-    let pdf = await fetch ("https://ctu.ac/assets/PDF/FAQ.pdf")
-    return pdf;
-}
+// async function getPDF () {
+//     let pdf = await fetch ("https://ctu.ac/assets/PDF/FAQ.pdf")
+//     return pdf;
+// }
