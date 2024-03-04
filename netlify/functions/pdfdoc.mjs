@@ -17,7 +17,7 @@ exports.handler = async (event, context) => {
         }
     } else {
         modifyPdf (id).then((pdf) => ({
-        return {
+        const response = {
             statusCode: 200,
             headers: {
                 'Access-Control-Allow-Origin': 'https://www.ctulocal1.org',
@@ -27,7 +27,7 @@ exports.handler = async (event, context) => {
             },
             body: pdf,
         };
-
+      return response;  
         })
     };
 };
