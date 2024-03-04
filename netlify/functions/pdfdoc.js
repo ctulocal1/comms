@@ -1,3 +1,5 @@
+import { degrees, PDFDocument, rgb, StandardFonts } from 'https://unpkg.com/pdf-lib/dist/pdf-lib.min.js';
+
 const CORS_HEADERS = {
     'Access-Control-Allow-Origin': 'https://members.ctulocal1.org',
     'Access-Control-Allow-Origin': 'https://members.ctunet.com',
@@ -14,6 +16,7 @@ exports.handler = async (event, context) => {
             body: "Your request must include an ID parameter.",
         }
     } else {
+        modifyPdf (id).then((pdf) => ({
         return {
             statusCode: 200,
             headers: {
@@ -22,11 +25,29 @@ exports.handler = async (event, context) => {
                 'Origin, X-Requested-With, Content-Type, Accept',
                 'Content-Type': 'application/json',
             },
-            body: `Doc ID = ${id}`,
+            body: pdf,
         };
+
+        })
     };
 };
-// async function getPDF () {
-//     let pdf = await fetch ("https://ctu.ac/assets/PDF/FAQ.pdf")
-//     return pdf;
-// }
+
+async function modifyPdf(id) {
+  const url = 'https://ctu.ac/assets/pdf/FAQ.pdf';
+  const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
+
+  const pdfDoc = await PDFDocument.load(existingPdfBytes);
+  const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
+
+  const pages = pdfDoc.getPages();
+  const firstPage = pages[0];
+  const { width, height } = firstPage.getSize();
+  firstPage.drawText(`proposals-${id}` , {
+    x: 50,
+    y: 50,
+    size: 10,
+  })
+
+  const pdfBytes = await pdfDoc.save();
+    return pdfBytes;
+}
