@@ -20,7 +20,7 @@
     "postinstall": "netlify-lambda install"
   }, 
   "dependencies": {
-    "netlify-lambda": "^1.6.2"
+    "netlify-lambda": "^1.6.2",
     "pdf-lib": "netlify/functions/pdf-lib.min.js"
   }
 }
