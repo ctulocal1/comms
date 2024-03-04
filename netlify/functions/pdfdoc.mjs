@@ -1,4 +1,4 @@
-import { degrees, PDFDocument, rgb, StandardFonts } from 'assets/js/pdf-lib.min.js';
+import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib.min.js';
 
 const CORS_HEADERS = {
     'Access-Control-Allow-Origin': 'https://members.ctulocal1.org',
