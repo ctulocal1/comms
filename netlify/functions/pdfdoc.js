@@ -22,7 +22,7 @@ exports.handler = async (event, context) => {
                 'Origin, X-Requested-With, Content-Type, Accept',
                 'Content-Type': 'application/json',
             },
-            body: "Reply",
+            body: `Doc ID = ${id}`,
         };
     };
 };
