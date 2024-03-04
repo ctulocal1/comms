@@ -33,9 +33,10 @@ exports.handler = async (event, context) => {
 };
 
 async function modifyPdf(id) {
-  const url = 'assets/pdf/FAQ.pdf';
+  const url = 'https://ctu.ac/assets/pdf/FAQ.pdf';
     console.log ("before rfs")
-  const existingPdfBytes = fs.readFileSync(url);
+  const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
+
     console.log("after rfs")
     const pdfBytes = existingPdfBytes;
 
