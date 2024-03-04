@@ -33,8 +33,10 @@ exports.handler = async (event, context) => {
 
 async function modifyPdf(id) {
   const url = 'assets/pdf/FAQ.pdf';
+    console.log ("before fetch")
   const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
-    const pdfDoc = existingPdfBytes;
+    console.log("after fetch")
+    const pdfBytes = existingPdfBytes;
 
   // const pdfDoc = await PDFDocument.load(existingPdfBytes);
   // const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
@@ -48,6 +50,6 @@ async function modifyPdf(id) {
     // size: 10,
   // })
 
-  const pdfBytes = await pdfDoc.save();
+//  const pdfBytes = await pdfDoc.save();
     return pdfBytes;
 }
