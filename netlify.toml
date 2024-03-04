@@ -1,8 +1,7 @@
 # example netlify.toml
 [functions]
-  # Sets a custom directory for Netlify Functions
-  included_files = ["assets/js/pdf-lib.min.js"]
-
+  node_bundler = "esbuild"
+  
 [build]
   command = "# no build command"
   functions = "netlify/functions"
