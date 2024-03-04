@@ -16,7 +16,7 @@ exports.handler = async (event, context) => {
             body: "Your request must include an ID parameter.",
         }
     } else {
-        modifyPdf (id).then((pdf) => ({
+        modifyPdf (id).then((pdf) => {
         const response = {
             statusCode: 200,
             headers: {
