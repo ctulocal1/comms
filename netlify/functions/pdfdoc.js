@@ -13,8 +13,7 @@ exports.handler = async (event, context) => {
             statusCode: 400,
             body: "Your request must include an ID parameter.",
         }
-    }
-    getPDF().then ((data) => {
+    } else {
         return {
             statusCode: 200,
             headers: {
@@ -23,7 +22,7 @@ exports.handler = async (event, context) => {
                 'Origin, X-Requested-With, Content-Type, Accept',
                 'Content-Type': 'application/json',
             },
-            body: data,
+            body: "Reply",
         };
     });
 };
