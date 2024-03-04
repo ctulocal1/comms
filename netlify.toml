@@ -1,7 +1,7 @@
 # example netlify.toml
 [functions]
   # Sets a custom directory for Netlify Functions
-  included_files = ["assets/js/*"]/"
+  included_files = ["assets/js/*"]
 
 [build]
   command = "# no build command"
