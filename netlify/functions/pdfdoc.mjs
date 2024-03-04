@@ -32,20 +32,21 @@ exports.handler = async (event, context) => {
 };
 
 async function modifyPdf(id) {
-  const url = 'https://ctu.ac/assets/pdf/FAQ.pdf';
+  const url = 'assets/pdf/FAQ.pdf';
   const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
+    const pdfDoc = existingPdfBytes;
 
-  const pdfDoc = await PDFDocument.load(existingPdfBytes);
-  const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
+  // const pdfDoc = await PDFDocument.load(existingPdfBytes);
+  // const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
-  const pages = pdfDoc.getPages();
-  const firstPage = pages[0];
-  const { width, height } = firstPage.getSize();
-  firstPage.drawText(`proposals-${id}` , {
-    x: 50,
-    y: 50,
-    size: 10,
-  })
+  // const pages = pdfDoc.getPages();
+  // const firstPage = pages[0];
+  // const { width, height } = firstPage.getSize();
+  // firstPage.drawText(`proposals-${id}` , {
+    // x: 50,
+    // y: 50,
+    // size: 10,
+  // })
 
   const pdfBytes = await pdfDoc.save();
     return pdfBytes;
