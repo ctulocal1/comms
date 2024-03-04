@@ -6,9 +6,9 @@ const CORS_HEADERS = {
 }
 
 exports.handler = async (event, context) => {
-    const id = event.queryStringParameters.id;
-    console.log(docid)
-    if (!docid) {
+    const id = event.queryStringParameters.docid;
+    console.log(id)
+    if (!id) {
         return {
             statusCode: 400,
             body: "Your request must include an ID parameter.",
