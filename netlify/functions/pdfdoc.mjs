@@ -33,9 +33,8 @@ exports.handler = async (event, context) => {
 };
 
 async function modifyPdf(id) {
-  const url = 'https://www.ctulocal1.org/wp-content/uploads/2024/02/Scholarship_Application_2024.pdf';
     console.log ("before rfs")
-  const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
+  const existingPdfBytes = await getDoc();
 
     console.log("after rfs")
     const pdfBytes = existingPdfBytes;
@@ -54,4 +53,27 @@ async function modifyPdf(id) {
 
 //  const pdfBytes = await pdfDoc.save();
     return pdfBytes;
+}
+async function getDoc () {
+  let doc;
+  const url = 'assets/pdf/FAQ.pdf';
+
+  try {
+    const result = await fetch(fileURL, {
+      headers: {
+        Authorization: `Bearer ${process.env.AUTH_TOKEN}`
+      }
+    })
+    doc = await result.buffer()
+  } catch (error) {
+    console.log('error', error)
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        error: error.message
+      })
+    }
+  }
+
+  return doc;
 }
