@@ -2,6 +2,7 @@
 
 [functions]
   node_bundler = "esbuild"
+  included_files = "public/assets/pdf/*"
   
 [build]
   command = "# no build command"
