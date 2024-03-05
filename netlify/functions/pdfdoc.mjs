@@ -33,7 +33,7 @@ exports.handler = async (event, context) => {
 };
 
 async function modifyPdf(id) {
-  const url = 'https://github.com/ctulocal1/comms/raw/main/public/assets/pdf/FAQ.pdf';
+  const url = 'https://www.ctulocal1.org/wp-content/uploads/2024/02/Scholarship_Application_2024.pdf';
     console.log ("before rfs")
   const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
 
