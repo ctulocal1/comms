@@ -1,5 +1,5 @@
 import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
-import { fs } from 'fs';
+import { fetch } from 'node-fetch';
 
 const CORS_HEADERS = {
     'Access-Control-Allow-Origin': 'https://members.ctulocal1.org',
