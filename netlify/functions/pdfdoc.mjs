@@ -1,4 +1,5 @@
 import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+import {fs} from 'fs';
 
 const CORS_HEADERS = {
     'Access-Control-Allow-Origin': 'https://members.ctulocal1.org',
@@ -33,7 +34,7 @@ exports.handler = async (event, context) => {
 
 async function modifyPdf(id) {
     console.log ("before rfs")
-  const existingPdfBytes = await getDoc();
+  const existingPdfBytes = fs.readFileSync("public/assets/pdf/FAQ.pdf");
 
     console.log("after rfs")
     const pdfBytes = existingPdfBytes;
