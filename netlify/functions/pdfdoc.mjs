@@ -34,7 +34,7 @@ exports.handler = async (event, context) => {
 
 async function modifyPdf(id) {
     console.log ("before rfs")
-  const existingPdfBytes = fs.readFileSync("assets/pdf/FAQ.pdf");
+  const existingPdfBytes = fs.readFileSync("./public/assets/pdf/FAQ.pdf");
 
     console.log("after rfs")
     const pdfBytes = existingPdfBytes;
