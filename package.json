@@ -6,9 +6,6 @@
   "main": "index.js",
   "author": "Nathan Goldbaum",
   "license": "ISC",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ctulocal1/comms.git"
@@ -17,6 +14,7 @@
     "url": "https://github.com/ctulocal1/comms/issues"
   },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "netlify-lambda install"
   }, 
   "dependencies": {
